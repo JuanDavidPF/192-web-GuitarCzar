@@ -1,0 +1,70 @@
+
+
+* {
+    margin: 0;
+    border-style: hidden;
+}
+
+
+.mainHeader--cover {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    top: -120px;
+}
+
+.mainHeader--navigation {
+    position: relative;
+    display: inline-flex;
+    left: 5vw;
+    top: 25px;
+    z-index: 2;
+}
+
+.logo {
+
+
+ 
+}
+
+
+/*
+.mainNavigation {
+    position: relative;
+    top: 40px;
+    padding-left: 2;
+    font-family: 'Raleway', sans-serif;
+    font-weight: light;
+}
+
+.mainNavigation--link {
+
+    color: white;
+    text-decoration: none;
+
+}
+
+
+
+.mainSearchBar {
+    display: inline;
+}
+
+.searchBar {
+
+    position: relative;
+   padding-left: 200px;
+    left: 5vw;
+    top: -30px;
+    width: 45%;
+    height: 30px;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.mainSearchBar--button {
+    position: relative;
+    top: 5px;
+    left: 6vw;
+}
+*/
