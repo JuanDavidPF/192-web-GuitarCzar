@@ -16,7 +16,6 @@
 }
 
 .mainHeader--navigation {
-    background-color: rgba(0, 0, 0, 0.342);
     position: relative;
     display: inline-flex;
     left: 5vw;
@@ -56,7 +55,7 @@
     font-style: lighter;
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
-    margin-left: 7%;
+    margin-left: 14%;
 
 }
 
@@ -67,41 +66,12 @@
 }
 
 
-/*
-.mainNavigation {
-    position: relative;
-    top: 40px;
-    padding-left: 2;
-    font-family: 'Raleway', sans-serif;
-    font-weight: light;
-}
 
-.mainNavigation--link {
+/*Pantalla mediana */
+@media (max-width: 1200px) {
+    .mainHeader--navigation {
+        background-color: rgba(0, 0, 0, 0.555);
 
+    }
 
 }
-
-
-
-.mainSearchBar {
-    display: inline;
-}
-
-.searchBar {
-
-    position: relative;
-   padding-left: 200px;
-    left: 5vw;
-    top: -30px;
-    width: 45%;
-    height: 30px;
-    font-family: 'Raleway', sans-serif;
-
-}
-
-.mainSearchBar--button {
-    position: relative;
-    top: 5px;
-    left: 6vw;
-}
-*/
