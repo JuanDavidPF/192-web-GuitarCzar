@@ -1,77 +1,150 @@
+/*pantalla grande */
 * {
     margin: 0;
     border-style: hidden;
 }
 
+@media (min-width: 1350px) {
 
-.mainHeader--cover {
-    position: relative;
-    width: 100%;
-    z-index: 0;
-    top: -125px;
+
+    .mainHeader--cover {
+        background-image: url("./data/mainCover.png");
+        background-size: 100vw;
+        background-repeat: no-repeat, repeat;
+        height: 850px;
+    }
+
+
+    .logo {
+        width: 110%;
+    }
+
+    .mainHeader--navigation {
+        position: relative;
+        display: inline-flex;
+        left: 5vw;
+        top: 25px;
+
+    }
+
+    .mainHeader--middle {
+        position: relative;
+        text-align: center;
+        left: 1vw;
+        top: 40px;
+    }
+
+
+    .mainheader--srchBar {
+
+        height: 32px;
+        width: 55vw;
+        font-size: 17px;
+        font-family: 'Raleway', sans-serif;
+        vertical-align: bottom;
+        padding-left: 15px;
+    }
+
+    .mainHeader--bottom {
+        position: relative;
+        top: 20px;
+        margin-left: -6vw;
+
+    }
+
+    .mainNav--link {
+
+        color: rgba(255, 255, 255, 0.603);
+        text-decoration: none;
+        font-style: lighter;
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        margin-left: 5vw;
+
+    }
+
+    .mainHeader--right {
+        position: relative;
+        top: 19px;
+        left: 2vw;
+    }
+
 }
 
-.logo {
-    width: 110%;
-}
-
-.mainHeader--navigation {
-    position: relative;
-    display: inline-flex;
-    left: 5vw;
-    top: 25px;
-    z-index: 2;
-
-}
-
-.mainHeader--middle {
-    position: relative;
-    left: 1vw;
-    top: 40px;
-}
-
-
-.mainheader--srchBar {
-
-    height: 32px;
-    width: 55vw;
-    font-size: 17px;
-    font-family: 'Raleway', sans-serif;
-    vertical-align: bottom;
-    padding-left: 15px;
-}
-
-.mainHeader--bottom {
-    position: relative;
-    top: 20px;
-    margin-left: -4vw;
-
-}
-
-.mainNav--link {
-
-    color: rgba(255, 255, 255, 0.603);
-    text-decoration: none;
-    font-style: lighter;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    margin-left: 14%;
-
-}
-
-.mainHeader--right {
-    position: relative;
-    top: 19px;
-    left: 2vw;
-}
 
 
 
 /*Pantalla mediana */
-@media (max-width: 1200px) {
-    .mainHeader--navigation {
-        background-color: rgba(0, 0, 0, 0.555);
 
+
+
+@media (max-width: 1350px) {
+
+
+    .mainHeader--cover {
+        background-image: url("./data/mainCover.png");
+        background-size: 100vw;
+        background-position-y: 80px;
+        background-repeat: no-repeat, repeat;
+        height: 750px;
+    }
+
+    .mainHeader--navigation {
+        background: rgb(0, 0, 0);
+
+    }
+
+    .mainHeader--navigation {
+        position: relative;
+        display: inline-flex;
+        width: 100%;
+        height: 110px;
+
+    }
+
+    .logo {
+
+        width: 70%;
+    }
+
+    .mainHeader--left {
+        position: relative;
+        top: 17px;
+        left: 10vw;
+    }
+
+    .mainHeader--middle {
+        position: relative;
+        left: 10vw;
+        width: 55%;
+    }
+
+    .mainHeader--bottom {
+        width: 100%
+    }
+
+    .mainHeader--right {
+        position: relative;
+        top: 17px;
+        left: 10vw;
+    }
+
+    .mainNav--link {
+
+        color: rgba(255, 255, 255, 0.603);
+        text-decoration: none;
+        font-style: lighter;
+        font-family: 'Raleway', sans-serif;
+        font-size: 15px;
+        margin-left: 5%;
+
+    }
+
+
+    .mainHeader--searchButton {
+        position: relative;
+        top: 17px;
+        width: 70%;
     }
 
 }
