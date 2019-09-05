@@ -4,206 +4,94 @@
     border-style: hidden;
 }
 
-@media (min-width: 1300px) {
+.mainHeader--cover {
+    background-image: url("./data/mainCover.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 25% 30%;
+    width: 100%;
+    height: 850px;
+    overflow-x: hidden;
+}
 
+.mainHeader--navigation {
 
-    .mainHeader--cover {
-        background-image: url("./data/mainCover.png");
-        background-size: 100vw;
-        background-repeat: no-repeat, repeat;
-        height: 850px;
-    }
-
-
-    .logo {
-        width: 110%;
-    }
-
-    .mainHeader--navigation {
-        position: relative;
-        display: inline-flex;
-        left: 5vw;
-        top: 25px;
-
-    }
-
-    .mainHeader--middle {
-        position: relative;
-
-        left: 1vw;
-        top: 40px;
-    }
-
-
-    .mainheader--srchBar {
-
-        height: 32px;
-        width: 55vw;
-        font-size: 17px;
-        font-family: 'Raleway', sans-serif;
-        vertical-align: bottom;
-        padding-left: 15px;
-    }
-
-    .mainHeader--bottom {
-        position: relative;
-        top: 20px;
-        margin-left: -7.4vw;
-
-    }
-
-    .mainNav--link {
-
-        color: rgba(255, 255, 255, 0.603);
-        text-decoration: none;
-        font-style: lighter;
-        font-family: 'Raleway', sans-serif;
-        font-size: 18px;
-        margin-left: 12%;
-
-    }
-
-    .mainHeader--right {
-        position: relative;
-        top: 19px;
-        left: 2vw;
-    }
+    background: rgba(0, 0, 0, 0.671);
+    background-position: center center;
+    display: inline-flex;
+    padding-bottom: 12px;
+    margin-left: 20px;
+    margin-top: 20px;
 
 }
 
+.logo {
 
+    width: 110px;
+}
 
+.mainHeader--left {
 
-/*Pantalla mediana */
-
-
-
-@media (max-width: 1300px) and (min-width: 400px) {
-
-
-    .mainHeader--cover {
-        background-image: url("./data/mainCover.png");
-        background-size: 100vw;
-        background-position-y: 80px;
-        background-repeat: no-repeat, repeat;
-        height: 750px;
-    }
-
-
-    .mainHeader--navigation {
-        background: rgb(0, 0, 0);
-        position: relative;
-        display: inline-flex;
-        width: 100%;
-        height: 110px;
-
-    }
-
-    .logo {
-
-        width: 115px;
-    }
-
-    .mainHeader--left {
-        position: relative;
-        top: 17px;
-        left: 7vw;
-    }
-
-    .mainHeader--middle {
-        position: relative;
-        left: 7vw;
-        width: 55%;
-        top: 46px;
-    }
-
-    .mainHeader--bottom {
-        position: relative;
-        top: 10px;
-        left: -2.5vw;
-    }
-
-    .mainheader--srchBar {
-        height: 28px;
-        width: 90%;
-        font-size: 14px;
-        font-family: 'Raleway', sans-serif;
-        vertical-align: bottom;
-        padding-left: 15px;
-    }
-
-    .mainHeader--right {
-        position: relative;
-        top: 17px;
-        left: 7vw;
-    }
-
-    .mainNav--link {
-
-        color: rgba(255, 255, 255, 0.603);
-        text-decoration: none;
-        font-style: lighter;
-        font-family: 'Raleway', sans-serif;
-        font-size: 15px;
-        margin-left: 5%;
-
-    }
-
-    .mainHeader--searchButton {
-        position: relative;
-        top: 17px;
-        width: 70%;
-    }
-
-
-    @media (max-width: 600px) {
-
-        .mainNav--link {
-            display: block;
-
-        }
-    }
+    margin-left: 5vw;
+    margin-top: 20px;
+    padding-right: 10px;
 
 }
 
+.mainHeader--middle {
+
+    margin-top: 44px;
+    width: 50%;
+
+}
+
+.mainHeader--bottom {
+
+    margin-top: 15px;
+    width: 100vw;
+    line-height: 20px;
+}
+
+.mainheader--srchBar {
+    height: 28px;
+    width: 95%;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    vertical-align: bottom;
+    padding-left: 10px;
+}
+
+.mainHeader--right {
+
+    margin-top: 28px;
 
 
+}
 
-/*Pantalla pequeña */
+.mainNav--link {
 
+    color: rgba(255, 255, 255, 0.603);
+    text-decoration: none;
+    font-style: lighter;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
 
-
-@media (max-width: 400px) {
-
-
-    .mainHeader--navigation {
-        background: rgb(0, 0, 0);
-        position: relative;
-        display: inline-flex;
-        width: 100%;
-        height: 85px;
-
-    }
+    transition: text-shadow .3s;
+    transition: color .3s;
 
 
-    .mainHeader--right,
-    .mainHeader--middle {
-        display: none;
+}
 
-    }
+.mainNav--link:hover {
+    color: #F25252;
+    text-shadow: 0 0 .20px #F25252, 0 0 .20px #F25252, 0 0 .9px #F25252;
+}
 
+.mainNav--link:nth-child(n+2) {
+    margin-left: 6vw;
+}
 
-    .mainHeader--left {
-        position: relative;
-        margin: auto;
-    }
+.mainHeader--searchButton {
 
-    .logo {
-        width: 80px;
-    }
-
-
-
-
-
+    width: 75px;
 }
