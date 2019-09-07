@@ -5,15 +5,15 @@
 }
 
 .mainHeader__cover {
+    background-blend-mode: darken;
+    transition: 5s, background-position 5s 0s ease-out;
     background-image: url("./data/mainCover0.png");
-    background-size: cover;
+    background-size: 2210px 1178px;
     background-repeat: no-repeat;
-    background-position: 36% 30%;
-    width: 110%;
+    background-attachment: scroll;
+    background-position: 25% 30%;
     height: 900px;
     overflow-x: hidden;
-    background-blend-mode: darken;
-    transition: 3s;
 
 }
 
@@ -21,22 +21,24 @@
 
 
     background: rgba(0, 0, 0, 0.829);
+    box-shadow: 0 15px 20px 0 rgb(0, 0, 0);
     background-position-x: 30px;
     display: inline-flex;
     padding-bottom: 10px;
     margin-left: 10vw;
     margin-top: 30px;
     width: 80vw;
-    height: 105px;
+    height: 96px;
 
 }
 
 .logo {
 
-    width: 135px;
+    width: 115px;
 }
 
 .mainHeader__left {
+
     margin-left: 5%;
     margin-top: 10px;
 
@@ -59,7 +61,8 @@
 }
 
 .mainheader__srchBar {
-    height: 32px;
+    box-shadow: 0 4px 0 0 #F25252;
+    height: 28px;
     width: 100%;
     font-size: 15px;
     font-family: 'Raleway', sans-serif;
@@ -83,9 +86,9 @@
     text-decoration: none;
     font-weight: lighter;
     font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    transition: text-shadow .3s;
-    transition: color .3s;
+    font-size: 15px;
+    transition: text-shadow .3s, color .3s;
+
 
 
 }
@@ -124,8 +127,8 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#292929', endColorstr='#1c1c1c', GradientType=1);
     font-family: 'Titillium Web', sans-serif;
     font-weight: 700;
-    width: 270px;
-    height: 270px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     color: white;
     text-align: center;
@@ -135,9 +138,8 @@
     font-size: 25px;
     text-decoration: none;
     margin-left: 65%;
-    transition: color .3s;
-    transition: text-shadow .3s;
-    transition: font-size .3s;
+    transition: color .3s, text-shadow .3s, font-size .3s;
+
 }
 
 .coverInfo__button:hover {
@@ -167,10 +169,74 @@
     color: rgb(255, 255, 255);
 }
 
-.bullets {
+.bulletContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: -70px;
+
+}
+
+.bullets input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
+}
+
+.bulletContainer .bullet {
+
+
+    display: flex;
+    margin-left: 18px;
+    margin-right: 18px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    border-Radius: 50%;
+    transition: background-color 1s, box-shadow .5s;
+
+
+}
+
+.bullets:hover .bullet {
+    box-shadow: 0 0 0 4px rgb(255, 255, 255);
+}
+
+.bullets input:checked+.bullet {
+    box-shadow: 0 0 0 4px #F25252;
+    background-color: #F25252;
+}
+
+@media (max-width: 1200px) {
+    .mainHeader__cover {
+        background-blend-mode: darken;
+        transition: 5s, background-position 10s 0s ease-out;
+        background-image: url("./data/mainCover0.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: 25% 30%;
+        height: 900px;
+        overflow-x: hidden;
+
+    }
+}
+
+
+@media (min-width: 1920px) {
+    .mainHeader__cover {
+        background-blend-mode: darken;
+        transition: 5s, background-position 3s 0s ease-out;
+        background-image: url("./data/mainCover0.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: 25% 30%;
+        height: 900px;
+        overflow-x: hidden;
+    }
 }
