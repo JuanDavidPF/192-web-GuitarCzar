@@ -8,7 +8,10 @@ var fondoX = 10;
 var draw = setInterval(draw, 17);
 var counterSlider = setInterval(hiloCoverSlideShow, 10000);
 var counterCover = 0;
-
+var btnBurguer = document.querySelector('.hamburgerButton');
+var hamburguerToggle = false;
+var navTop = document.querySelector('.mainHeader__top');
+var navBottom = document.querySelector('.mainHeader__bottom');
 
 function hiloCoverSlideShow() {
     counterCover++;
@@ -28,7 +31,7 @@ function hiloCoverSlideShow() {
 
 function draw() {
     console.log(fondoX);
-    mainCover.style.backgroundPosition = fondoX + '%';
+    mainCover.style.backgroundPositionX = fondoX + '%';
 
     switch (counterCover) {
         case 0:
@@ -59,6 +62,16 @@ function draw() {
             bulletCover4.checked = true;
 
             break;
+
+    }
+
+    if (hamburguerToggle) {
+        navTop.style.top = '75px';
+        navBottom.style.top = '110px';
+
+    } else {
+        navTop.style.top = '-125px';
+        navBottom.style.top = '-180px';
 
     }
 
@@ -106,4 +119,13 @@ bulletCover4.addEventListener("click", function () {
     counterSlider = setInterval(hiloCoverSlideShow, 7000);
     fondoX = 5;
 
+});
+
+//opening the hamburguer menu
+btnBurguer.addEventListener("click", function () {
+    btnBurguer.classList.toggle("change");
+    hamburguerToggle = !hamburguerToggle;
+    console.log(hamburguerToggle);
+
+   
 });
