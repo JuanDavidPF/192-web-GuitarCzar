@@ -12,6 +12,8 @@ var btnBurguer = document.querySelector('.hamburgerButton');
 var hamburguerToggle = false;
 var navTop = document.querySelector('.mainHeader__top');
 var navBottom = document.querySelector('.mainHeader__bottom');
+var coverText = document.querySelector('.coverInfo__button');
+
 
 function hiloCoverSlideShow() {
     counterCover++;
@@ -37,29 +39,38 @@ function draw() {
         case 0:
             mainCover.style.backgroundImage = 'url("./data/mainCover0.png")';
             bulletCover0.checked = true;
+            coverText.innerHTML = 'B.C. RICH <br> BICH NATURAL';
 
             break;
 
         case 1:
             mainCover.style.backgroundImage = 'url("./data/mainCover1.png")';
             bulletCover1.checked = true;
+            coverText.innerHTML = 'PRO SERIES CD24 <br> SNOW WHITE';
+
             break;
 
         case 2:
             mainCover.style.backgroundImage = 'url("./data/mainCover2.png")';
             bulletCover2.checked = true;
+            coverText.innerHTML = 'JS SERIES <br> SPECTRA BASS<br>JS3QV';
+
 
             break;
 
         case 3:
             mainCover.style.backgroundImage = 'url("./data/mainCover3.png")';
             bulletCover3.checked = true;
+            coverText.innerHTML = 'PRO SERIES <br> SOLOIST™  <br> SL7PT MAH<br>NORTHERN LIGHTS';
+
 
             break;
 
         case 4:
             mainCover.style.backgroundImage = 'url("./data/mainCover4.png")';
             bulletCover4.checked = true;
+            coverText.innerHTML = 'PRO SEIRES <br> SOLOIST™  SL72A <br> CHARCOAL GRAY';
+
 
             break;
 
@@ -127,5 +138,5 @@ btnBurguer.addEventListener("click", function () {
     hamburguerToggle = !hamburguerToggle;
     console.log(hamburguerToggle);
 
-   
+
 });

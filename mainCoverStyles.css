@@ -5,6 +5,10 @@
 
 }
 
+#chrome {
+    isolation: isolate
+}
+
 
 .container {
     display: none;
@@ -13,7 +17,7 @@
 
 .mainHeader__cover {
     background-blend-mode: darken;
-    transition: 5s, background-position-x 5s 0s ease-out, background-position-y .4s 0s ease-out;
+    transition: 5s, background-position-x 5s 0s ease-out, background-position-y .5s 0s ease-out;
     background-image: url("./data/mainCover0.png");
     background-size: 2210px 1178px;
     background-repeat: no-repeat;
@@ -26,8 +30,8 @@
 
 .mainHeader__navigation {
 
-    transition: width .5s 0s ease-out, margin .5s 0s ease-out, box-shadow .5s;
-    background: rgba(0, 0, 0, 0.75);
+    transition: width .6s 0s ease-out, margin .5s 0s ease-out, box-shadow .5s, background-color 2s;
+    background-color: rgba(0, 0, 0, 0.548);
     box-shadow: 0 15px 20px 0 rgb(0, 0, 0);
     background-position-x: 30px;
     display: inline-flex;
@@ -117,47 +121,47 @@
 
 
 .coverInfo {
-
-    margin-top: 200px;
+    text-align: center;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    margin-top: 170px;
     width: 100vw;
 
 }
 
 
 .coverInfo__button {
-    background: rgba(41, 41, 41, 0.1);
-    background: -moz-linear-gradient(-45deg, rgba(41, 41, 41, 0.1) 0%, rgba(33, 33, 33, 0.68) 30%, rgba(38, 38, 38, 1) 60%, rgba(28, 28, 28, 1) 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(41, 41, 41, 0.1)), color-stop(30%, rgba(33, 33, 33, 0.68)), color-stop(60%, rgba(38, 38, 38, 1)), color-stop(100%, rgba(28, 28, 28, 1)));
-    background: -webkit-linear-gradient(-45deg, rgba(41, 41, 41, 0.1) 0%, rgba(33, 33, 33, 0.68) 30%, rgba(38, 38, 38, 1) 60%, rgba(28, 28, 28, 1) 100%);
-    background: -o-linear-gradient(-45deg, rgba(41, 41, 41, 0.1) 0%, rgba(33, 33, 33, 0.68) 30%, rgba(38, 38, 38, 1) 60%, rgba(28, 28, 28, 1) 100%);
-    background: -ms-linear-gradient(-45deg, rgba(41, 41, 41, 0.1) 0%, rgba(33, 33, 33, 0.68) 30%, rgba(38, 38, 38, 1) 60%, rgba(28, 28, 28, 1) 100%);
-    background: linear-gradient(135deg, rgba(41, 41, 41, 0.1) 0%, rgba(33, 33, 33, 0.68) 30%, rgba(38, 38, 38, 1) 60%, rgba(28, 28, 28, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#292929', endColorstr='#1c1c1c', GradientType=1);
+
+    background-color: rgba(49, 48, 48, 0.904);
     font-family: 'Titillium Web', sans-serif;
     font-weight: 700;
-    width: 250px;
-    height: 250px;
+    width: 340px;
+    height: 340px;
     border-radius: 50%;
     color: white;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 25px;
+    font-size: 28px;
     text-decoration: none;
-    margin-left: 65%;
-    transition: color .3s, text-shadow .3s, font-size .3s;
+    margin-left: 70%;
+    margin-top: 230px;
+    transition: color .3s, text-shadow .3s, font-size .3s, margin .5s;
 
 }
 
 .coverInfo__button:hover {
     color: #F25252;
     text-shadow: 0 0 .20px #F25252, 0 0 .20px #F25252, 0 0 .9px #F25252;
-    font-size: 27px;
+    font-size: 32px;
+    justify-content: center;
 
 }
 
 .coverInfo__title {
+    transition: margin-top 2s, font-size .5s;
     background: -moz-linear-gradient(top, rgba(19, 19, 19, 0) 0%, rgba(14, 14, 14, 0.74) 28%, rgba(8, 8, 8, 1) 59%, rgba(0, 0, 0, 1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(19, 19, 19, 0)), color-stop(28%, rgba(14, 14, 14, 0.74)), color-stop(59%, rgba(8, 8, 8, 1)), color-stop(100%, rgba(0, 0, 0, 1)));
     background: -webkit-linear-gradient(top, rgba(19, 19, 19, 0) 0%, rgba(14, 14, 14, 0.74) 28%, rgba(8, 8, 8, 1) 59%, rgba(0, 0, 0, 1) 100%);
@@ -175,6 +179,7 @@
     font-weight: 100;
     font-size: 50px;
     color: rgb(255, 255, 255);
+    margin-top: -80px;
 }
 
 .bulletContainer {
@@ -205,7 +210,7 @@
     height: 10px;
     background-color: rgb(255, 255, 255);
     border-Radius: 50%;
-    transition: background-color 1s, box-shadow .5s;
+    transition: background-color 1s, box-shadow .5s, width .5s, height .5s, margin .5;
     cursor: pointer;
 
 }
@@ -245,7 +250,7 @@
 /* Medium screens*/
 @media (max-width: 1300px) {
     .mainHeader__cover {
-        transition: 3s, background-position-x 10s 0s ease-out, background-position-y .3s 0s ease-out;
+        transition: 3s, background-position-x 10s 0s ease-out, background-position-y 0s 0s ease-out;
         background-size: cover;
 
     }
@@ -256,14 +261,16 @@
         transition: margin-top .5s 0s ease-out, margin-left .5s 0s ease-out;
         width: 90vw;
 
+
     }
 
     .mainHeader__navigation {
-        transition: width .2s 0s ease-out, margin .2s .4s ease-out, box-shadow .5s, background-color 1s 0.5s;
+        transition: width .5s 0s ease-out, margin .8s 0s ease-out, box-shadow .5s, background-color 2s;
         width: 100%;
         margin: 0;
         margin-top: 20px;
-        box-shadow: 0 0px 0px 0 rgb(0, 0, 0);
+        background-color: rgba(21, 18, 34, 0.685);
+        box-shadow: 0 0px 0px 0 rgb(36, 10, 10);
 
     }
 
@@ -284,6 +291,24 @@
         width: 65px;
         margin-top: -3px;
     }
+
+    .coverInfo__button {
+
+        transition: color .3s, text-shadow .3s, font-size .3s, margin 1s;
+        background-color: rgba(27, 27, 27, 0.781);
+        width: 320px;
+        height: 320px;
+        font-size: 26px;
+        margin-top: 0px;
+        margin-left: 60%;
+
+    }
+
+    .coverInfo__title {
+        transition: margin 2s, font-size .5s;
+        margin-top: 10px;
+        font-size: 42px;
+    }
 }
 
 
@@ -295,7 +320,7 @@
 @media (max-width: 980px) {
 
     .mainHeader__cover {
-        transition: 3s, background-position-x 10s 0s ease-out, background-position-y .02s;
+        transition: 3s, background-position-x 10s 0s ease-out, background-position-y 0s;
         background-size: 1500px 797px;
         background-attachment: local;
         background-position-y: 60px;
@@ -304,8 +329,8 @@
     }
 
     .mainHeader__navigation {
-        transition: margin .1s 0s ease-out, box-shadow .5s, background-color .4s, height .5s;
-        background-color: rgb(24, 24, 24);
+        transition: margin .2s 0s ease-out, box-shadow .5s, background-color 2s, height .5s;
+        background-color: rgb(6, 2, 27);
         width: 100vw;
         margin: 0;
         height: 56px;
@@ -323,7 +348,7 @@
     .logo {
         margin-left: 10%;
         transition: width 1s;
-        width: 90px;
+        width: 70px;
     }
 
     .hamburgerButton {
@@ -380,7 +405,7 @@
         top: -125px;
         left: 0px;
         width: 100%;
-        background-color: rgba(24, 24, 24, 0.90);
+        background-color: rgba(6, 2, 27, 0.7);
         position: absolute;
 
     }
@@ -401,7 +426,7 @@
         display: block;
         text-align: center;
         justify-content: center;
-        background-color: rgba(24, 24, 24, 0.90);
+        background-color: rgb(6, 2, 27, 0.7);
     }
 
     .mainNav__link {
@@ -412,8 +437,66 @@
 
     .mainNav__link:nth-child(n+2) {
         margin-left: 0;
+
     }
 
 
+    .coverInfo__title {
+        transition: margin-top 2s, font-size .5s;
+        font-size: 34px;
+        margin-top: -20px;
+    }
+
+    .coverInfo__button {
+        background-color: rgba(39, 39, 39, 0.781);
+        margin-left: 34%;
+        width: 220px;
+        height: 220px;
+        font-size: 16px;
+        transition: color .3s, text-shadow .3s, font-size .3s, margin .8s;
+
+    }
+
+    .coverInfo__button:hover {
+        font-size: 20px;
+
+    }
+
+    .bulletContainer {
+        top: -110px;
+
+    }
+
+    .bulletContainer .bullet {
+
+        transition: width .5s, height .5s, margin .5;
+        margin-left: 12px;
+        margin-right: 12px;
+        width: 3px;
+        height: 3px;
+    }
+
+    .bullets:hover .bullet {
+        box-shadow: 0 0 0 2px rgb(255, 255, 255);
+    }
+
+    .bullets input:checked+.bullet {
+        box-shadow: 0 0 0 2px #F25252;
+
+    }
+
+    @media (max-width: 650px) {
+        .coverInfo__button {
+            margin: auto;
+
+        }
+
+        .coverInfo__title {
+            transition: margin-top .5s, font-size .5s;
+            font-size: 20px;
+
+        }
+
+    }
 
 }
