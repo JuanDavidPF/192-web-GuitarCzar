@@ -31,7 +31,7 @@ body {
 
 .mainHeader__cover {
     background-blend-mode: darken;
-    transition: 5s, background-position-x 5s 0s ease-out, background-position-y .5s 0s ease-out;
+    transition: 3s, background-position-x 5s 0s ease-out, background-position-y .5s 0s ease-out;
     background-image: url("./data/mainCover0.png");
     background-size: 2210px 1178px;
     background-repeat: no-repeat;
