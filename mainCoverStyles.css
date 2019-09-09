@@ -18,6 +18,17 @@
 
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    scroll-behavior: smooth;
+
+}
+
+
 .mainHeader__cover {
     background-blend-mode: darken;
     transition: 5s, background-position-x 5s 0s ease-out, background-position-y .5s 0s ease-out;
@@ -27,7 +38,7 @@
     background-attachment: scroll;
     background-position: 25% 30%;
     height: 900px;
-    overflow-x: hidden;
+
 
 }
 
@@ -60,7 +71,6 @@
 }
 
 .mainHeader__middle {
-
 
     margin-left: 2vw;
     margin-top: 32px;
@@ -230,12 +240,6 @@
 .bullets input:checked+.bullet {
     box-shadow: 0 0 0 4px #F25252;
     background-color: #F25252;
-}
-
-.hotOnes {
-    margin-top: -10px;
-    background-color: black;
-    height: 500px;
 }
 
 
@@ -424,6 +428,7 @@
         cursor: pointer;
         height: 0;
         width: 0;
+
     }
 
     .mainHeader__right {
@@ -436,11 +441,11 @@
         display: inline-flex;
         text-align: center;
         justify-content: center;
-        top: -125px;
+        top: -155px;
         left: 0px;
         height: 50px;
-        width: 100%;
-        background-color: rgba(6, 2, 27, 0.7);
+        width: 100vw;
+        background-color: rgba(6, 2, 27, 0.8);
         position: absolute;
 
     }
@@ -459,7 +464,7 @@
 
     .burguerGlass {
         transition: margin-left .7s;
-        display: block;              
+        display: block;
         margin-top: 16px;
         height: 25px;
         width: 25px;
@@ -472,11 +477,11 @@
         position: absolute;
         top: -180px;
         left: 0px;
-        width: 100%;
+        width: 100vw;
         display: block;
         text-align: center;
         justify-content: center;
-        background-color: rgb(6, 2, 27, 0.7);
+        background-color: rgb(6, 2, 27, 0.8);
     }
 
     .mainNav__link {

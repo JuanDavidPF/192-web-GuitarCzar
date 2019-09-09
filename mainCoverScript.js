@@ -1,4 +1,6 @@
 var mainCover = document.querySelector('.mainHeader__cover');
+var headerLeft = document.querySelector('.mainHeader__left');
+
 var bulletCover0 = document.querySelector('#firstBullet');
 var bulletCover1 = document.querySelector('#secondBullet');
 var bulletCover2 = document.querySelector('#thirdBullet');
@@ -17,7 +19,8 @@ var coverText = document.querySelector('.coverInfo__button');
 var coverTitle = document.querySelector('.coverInfo__title');
 var burguerGlass = document.querySelector('.burguerGlass');
 var searchBar = document.querySelector('.mainheader__srchBar');
-var anchoVentana = window.matchMedia("(max-width: 980px)");
+var ventanaPequena = window.matchMedia("(max-width: 980px)");
+
 
 function hiloCoverSlideShow() {
     counterCover++;
@@ -36,7 +39,8 @@ function hiloCoverSlideShow() {
 
 
 function draw() {
-    console.log(fondoX);
+
+
     mainCover.style.backgroundPositionX = fondoX + '%';
 
     switch (counterCover) {
@@ -89,17 +93,9 @@ function draw() {
 
     }
 
-    if (hamburguerToggle) {
-        navTop.style.top = '75px';
-        navBottom.style.top = '110px';
 
-    } else {
-        navTop.style.top = '-125px';
-        navBottom.style.top = '-180px';
 
-    }
-
-    if (anchoVentana.matches) {
+    if (ventanaPequena.matches) {
 
         if (searchGlassToggle) {
             searchBar.style.width = '60%';
@@ -112,13 +108,27 @@ function draw() {
             searchBar.style.opacity = '0';
             searchBar.style.transition = 'width .7s, opacity 0s .7s';
             burguerGlass.style.marginLeft = '0px';
+
         }
+
+        if (hamburguerToggle) {
+            navTop.style.top = '75px';
+            navBottom.style.top = '110px';
+        } else if (hamburguerToggle == false) {
+            navTop.style.top = '-125px';
+            navBottom.style.top = '-180px';
+        }
+
+
     } else {
         searchBar.style.transition = 'width 0s, opacity 0s 0s';
         searchBar.style.width = '100%';
         searchBar.style.opacity = '1';
-    }
+        if (hamburguerToggle) btnBurguer.classList.toggle("change");
+        hamburguerToggle = false;
+        searchGlassToggle = false;
 
+    }
 }
 
 
@@ -171,11 +181,11 @@ btnBurguer.addEventListener("click", function () {
     hamburguerToggle = !hamburguerToggle;
     searchGlassToggle = false;
 
-
 });
 
 //opening the search bar from hamburguer meno
 
 burguerGlass.addEventListener("click", function () {
     searchGlassToggle = !searchGlassToggle;
+
 });
