@@ -16,8 +16,6 @@
 
 .new__title {
 
-
-    overflow: hidden;
     transition: font-size .5s ease-out;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -50,8 +48,23 @@
     left: 100%;
 }
 
+.right__btn {
+    cursor: pointer;
+}
+
+.left__btn {
+    cursor: pointer;
+}
+
+
+.tape__control {
+    display: none;
+  
+}
+
+
 .instruments__tape {
-    transition: width .5s ease-out;
+    transition: width .5s ease-out, left.3s ease-out;
     height: 75%;
     width: 100%;
     position: relative;
@@ -119,10 +132,26 @@
 /* medium screens */
 @media (max-width: 1300px) {
     .instruments__tape {
+        transition: width .5s ease-out, left.3s ease-out;
+        width: 190%;
+        left: 0px;
+    }
 
-        transition: width .5s ease-out;
-        width: 195%;
-        left: -10px;
+    .tape__control {
+
+        left: 3%;
+        top: 1220px;
+        position: absolute;
+        width: 93vw;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+
+    .right__btn {
+        transform: rotate(180deg);
+
     }
 
 }
@@ -147,8 +176,18 @@
 
     .instruments__tape {
 
-        width: 600%;
-        left: -10px;
+        width: 575%;
+        margin-left: -0%;
     }
+
+    .tape__control {
+        top: 1020px;
+        position: absolute;
+        width: 90vw;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
 
 }

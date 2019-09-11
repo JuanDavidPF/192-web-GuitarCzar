@@ -22,6 +22,7 @@ var searchBar = document.querySelector('.mainheader__srchBar');
 var ventanaPequena = window.matchMedia("(max-width: 800px)");
 
 
+
 function hiloCoverSlideShow() {
     counterCover++;
     if (counterCover == 5) counterCover = 0;
