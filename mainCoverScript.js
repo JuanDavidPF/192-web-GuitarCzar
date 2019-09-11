@@ -19,7 +19,7 @@ var coverText = document.querySelector('.coverInfo__button');
 var coverTitle = document.querySelector('.coverInfo__title');
 var burguerGlass = document.querySelector('.burguerGlass');
 var searchBar = document.querySelector('.mainheader__srchBar');
-var ventanaPequena = window.matchMedia("(max-width: 980px)");
+var ventanaPequena = window.matchMedia("(max-width: 800px)");
 
 
 function hiloCoverSlideShow() {
@@ -39,7 +39,7 @@ function hiloCoverSlideShow() {
 
 
 function draw() {
-
+    console.log(pageYOffset);
 
     mainCover.style.backgroundPositionX = fondoX + '%';
 

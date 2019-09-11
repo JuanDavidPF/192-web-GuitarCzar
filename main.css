@@ -1,7 +1,7 @@
 .main {
     margin-top: -10px;
     background-color: black;
-    height: 2500px;
+    height: 2000px;
     width: 100%;
     text-align: center;
 }
@@ -9,16 +9,90 @@
 .new__products {
 
     background-color: white;
-    height: 25%;
+    height: 30%;
     box-shadow: 0 0 0 6px #F25252;
 
 }
 
 .new__title {
+
+    overflow: hidden;
     transition: font-size .5s ease-out;
-    padding-top: 70px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
+    vertical-align: center;
+}
+
+.new__title>span {
+    position: relative;
+    display: inline-block;
+}
+
+.new__title>span:before,
+.new__title>span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px solid;
+    width: 30vw;
+    /* half of limiter */
+    margin: 0 20px;
+}
+
+.new__title>span:before {
+    right: 100%;
+}
+
+.new__title>span:after {
+    left: 100%;
+}
+
+.instruments__tape {
+    overflow-x: hidden;
+    height: 75%;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    display: flex;
+    text-align: center;
+    vertical-align: center;
+    align-content: center;
+
+}
+
+.instruments {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+
+
+}
+
+.instrument {
+    width: 112px;
+    height: 336px;
+    margin: auto;
+
+
+}
+
+.instrument__link {
+
+ 
+    text-decoration: none;
+    margin-top: 35px;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.instrument__link:hover {
+    transition: color .3s ease-out, text-shadow .3s ease-out;
+    color: #F25252;
+    text-shadow: 0px 0px 2px #F25252;
 }
 
 .hot__product {
@@ -41,12 +115,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////*/
 /* medium screens */
-@media (max-width: 1300px) {
-
-
-
-
-}
+@media (max-width: 1300px) {}
 
 
 
@@ -63,9 +132,9 @@
 /* small screens */
 @media (max-width: 980px) {
     .new__title {
-       
-        font-size: 15px;
-       
+
+        font-size: 16px;
+
     }
 
 
