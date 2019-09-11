@@ -370,7 +370,11 @@ body {
     .mainHeader__navigation {
         transition: margin .2s 0s ease-out, box-shadow .5s, background-color 2s, height .5s;
         background-color: rgba(6, 2, 27);
+<<<<<<< HEAD
         width: 100%;
+=======
+        width: 100vw;
+>>>>>>> 60e98f3222b1fec498a31d0aeaedb5620141660c
         margin: 0;
         height: 56px;
 
