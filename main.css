@@ -150,33 +150,63 @@
     position: relative;
     display: flexbox;
     width: 100%;
-    height:5000px;
-   
+    height: 5000px;
+
 
 }
 
+.characteristic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.characteristics__title {
+    transition: opacity .5s ease-out, font-size .5s ease-out, width .5s ease-out, height .5s ease-out;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F25252;
+    margin: auto;
+    color: white;
+    font-size: 35px;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
 .characteristics__one {
-   
+    transition: margin-left 0.7s ease-out;
     padding-top: 2vw;
     margin-left: -60%;
     display: flex;
-    width: 60%;
-   
+    width: 50%;
+
 }
 
 .characteristics__two {
+    transition: margin-left 0.7s ease-out;
     padding-top: 2vw;
+    margin-left: -60%;
     display: flex;
-    margin-left: 100%;
-    width: 60%;
+    width: 50%;
 }
 
 .characteristics__three {
+    transition: margin-left 0.6s ease-out;
     padding-top: 2vw;
     display: flex;
-    width: 65%;
+    width: 55%;
     margin-left: -70%;
 }
+
 
 
 
@@ -221,11 +251,20 @@
         height: 220px;
     }
 
-    .characteristics__one { 
-                
+    .characteristics__one {
+
         width: 60%;
     }
-    
+
+    .characteristics__title {
+        transition: opacity .5s ease-out, font-size .5s ease-out, width .5s ease-out, height .5s ease-out;
+        font-size: 20px;
+        width: 250px;
+        height: 250px;
+
+    }
+
+
 
 }
 
@@ -268,10 +307,37 @@
         line-height: 40px;
         height: 150px;
     }
-    .characteristics__one { 
-                
-        width: 65%;
+
+    .characteristics__one,
+    .characteristics__two,
+    .characteristics__three {
+
+        width: 90%;
     }
+
+    .characteristic {
+        display: block;
+        align-items: center;
+        text-align: center;
+
+
+    }
+
+    .characteristics__title {
+        transition: opacity .5s ease-out, font-size .5s ease-out, width .5s ease-out, height .5s ease-out;
+        color: black;
+        background-color: initial;
+        font-size: 20px;
+        width: 250px;
+        height: 250px;     
+    }
+
+   
+
+
+
+
+
 
 
 

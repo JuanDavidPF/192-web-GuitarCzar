@@ -7,6 +7,10 @@ var guitarTape = document.querySelector('.instruments__tape');
 var mastil = document.querySelector('.characteristics__one');
 var body = document.querySelector('.characteristics__two');
 var palanca = document.querySelector('.characteristics__three');
+var titleOne = document.querySelector('.one');
+var titleTwo = document.querySelector('.two');
+var titleThree = document.querySelector('.three');
+
 var draw = setInterval(draw, 17);
 var contador = 0;
 
@@ -77,45 +81,46 @@ function draw() {
 
     if (ventanaGrande.matches) {
         //mastil
-        if (pageYOffset < 1600) {
-            mastil.style.transition = 'margin-left .5s ease-out';
+        if (pageYOffset < 1700) {
+
+            titleOne.style.opacity = '0';
             mastil.style.marginLeft = '-1200px';
         }
-        if (pageYOffset > 1600 && pageYOffset < 2254) {
-            mastil.style.transition = 'margin-left 1s ease-out';
+        if (pageYOffset > 1700 && pageYOffset < 2254) {
+            titleOne.style.opacity = '1';
             mastil.style.marginLeft = '-20px';
         }
-        if (pageYOffset > 2400) {
-            body.style.transition = 'margin-left .5s ease-out';
+        if (pageYOffset > 2254) {
+            titleOne.style.opacity = '0';
             mastil.style.marginLeft = '-1200px';
         }
         //body
 
 
         if (pageYOffset < 2091) {
-            body.style.transition = 'margin-left .5s ease-out';
-            body.style.marginLeft = '2200px';
+            titleTwo.style.opacity = '0';
+            body.style.marginLeft = '-1200px';
         }
         if (pageYOffset > 2091 && pageYOffset < 2890) {
-            body.style.transition = 'margin-left 1s ease-out';
-            body.style.marginLeft = '44%';
+            titleTwo.style.opacity = '1';
+            body.style.marginLeft = '-20px';
         }
         if (pageYOffset > 2890) {
-            body.style.transition = 'margin-left .5s ease-out';
-            body.style.marginLeft = '2200px';
+            titleTwo.style.opacity = '0';
+            body.style.marginLeft = '-1200px';
         }
 
         //palanca
         if (pageYOffset < 2570) {
-            palanca.style.transition = 'margin-left .5s ease-out';
+            titleThree.style.opacity = '0';
             palanca.style.marginLeft = '-1200px';
         }
         if (pageYOffset > 2570 && pageYOffset < 3254) {
-            palanca.style.transition = 'margin-left 1s ease-out';
+            titleThree.style.opacity = '1';
             palanca.style.marginLeft = '-20px';
         }
         if (pageYOffset > 3200) {
-            body.style.transition = 'margin-left .5s ease-out';
+            titleThree.style.opacity = '0';
             palanca.style.marginLeft = '-1200px';
         }
 
@@ -123,15 +128,15 @@ function draw() {
 
         //mastil
         if (pageYOffset < 1588) {
-            mastil.style.transition = 'margin-left .5s ease-out';
+            titleOne.style.opacity = '0';
             mastil.style.marginLeft = '-1200px';
         }
         if (pageYOffset > 1588 && pageYOffset < 2277) {
-            mastil.style.transition = 'margin-left 1s ease-out';
+            titleOne.style.opacity = '1';
             mastil.style.marginLeft = '-20px';
         }
         if (pageYOffset > 2277) {
-            body.style.transition = 'margin-left .5s ease-out';
+            titleOne.style.opacity = '0';
             mastil.style.marginLeft = '-1200px';
         }
 
@@ -139,74 +144,78 @@ function draw() {
 
 
         if (pageYOffset < 2029) {
-            body.style.transition = 'margin-left .5s ease-out';
-            body.style.marginLeft = '2200px';
+            titleTwo.style.opacity = '0';
+            body.style.marginLeft = '-1200px';
         }
         if (pageYOffset > 2029 && pageYOffset < 2729) {
-            body.style.transition = 'margin-left 1s ease-out';
-            body.style.marginLeft = '44%';
+            titleTwo.style.opacity = '1';
+            body.style.marginLeft = '-20px';
         }
         if (pageYOffset > 2729) {
-            body.style.transition = 'margin-left .5s ease-out';
-            body.style.marginLeft = '2200px';
+            titleTwo.style.opacity = '0';
+            body.style.marginLeft = '-1200px';
         }
 
         //palanca
         if (pageYOffset < 2329) {
-            palanca.style.transition = 'margin-left .5s ease-out';
+            titleThree.style.opacity = '0';
             palanca.style.marginLeft = '-1200px';
         }
         if (pageYOffset > 2339 && pageYOffset < 2929) {
-            palanca.style.transition = 'margin-left 1s ease-out';
+            titleThree.style.opacity = '1';
             palanca.style.marginLeft = '-20px';
         }
         if (pageYOffset > 2929) {
-            palanca.style.transition = 'margin-left .5s ease-out';
+            titleThree.style.opacity = '0';
             palanca.style.marginLeft = '-1200px';
         }
 
     } else if (ventanaPequena.matches) {
+        titleOne.style.opacity = '1';
+        titleTwo.style.opacity = '1';
+        titleThree.style.opacity = '1';
 
         //mastil
-        if (pageYOffset < 1264) {
-            mastil.style.transition = 'margin-left .5s ease-out';
+        if (pageYOffset < 1320) {
+
             mastil.style.marginLeft = '-1200px';
         }
-        if (pageYOffset > 1264 && pageYOffset < 1859) {
-            mastil.style.transition = 'margin-left 1s ease-out';
+        if (pageYOffset > 1320 && pageYOffset < 1830) {
+
             mastil.style.marginLeft = '-20px';
         }
-        if (pageYOffset > 1859) {
-            mastil.style.transition = 'margin-left .5s ease-out';
+        if (pageYOffset > 1830) {
+
             mastil.style.marginLeft = '-1200px';
         }
 
         //body
 
 
-        if (pageYOffset < 1360) {
-            body.style.transition = 'margin-left .5s ease-out';
-            body.style.marginLeft = '2200px';
+        if (pageYOffset < 1630) {
+
+            body.style.marginLeft = '-1200px';
         }
-        if (pageYOffset > 1360 && pageYOffset < 2107) {
-            body.style.transition = 'margin-left 1s ease-out';
-            body.style.marginLeft = '44%';
+        if (pageYOffset > 1630 && pageYOffset < 2160) {
+
+            body.style.marginLeft = '-20px';
         }
-        if (pageYOffset > 2107) {
-            body.style.transition = 'margin-left .5s ease-out';
-            body.style.marginLeft = '2200px';
+        if (pageYOffset > 2160) {
+
+            body.style.marginLeft = '-1200px';
         }
 
         //palanca
-        if (pageYOffset < 1761) {
-            palanca.style.transition = 'margin-left .5s ease-out';
+        if (pageYOffset < 2244) {
+
             palanca.style.marginLeft = '-1200px';
         }
-        if (pageYOffset > 1761 && pageYOffset < 2429) {
-            palanca.style.transition = 'margin-left 1s ease-out';
+        if (pageYOffset > 2244 && pageYOffset < 2690) {
+
             palanca.style.marginLeft = '-20px';
         }
-        if (pageYOffset > 2429) {
+        if (pageYOffset > 2690) {
+
             palanca.style.marginLeft = '-1200px';
         }
 
