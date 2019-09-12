@@ -40,7 +40,7 @@ function hiloCoverSlideShow() {
 
 
 function draw() {
-    console.log(pageYOffset);
+   
 
     mainCover.style.backgroundPositionX = fondoX + '%';
 
