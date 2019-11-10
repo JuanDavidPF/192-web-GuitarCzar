@@ -1,16 +1,28 @@
-var btnBurguer = document.querySelector('.hamburgerButton');
 var ventanaPequena = window.matchMedia("(max-width: 800px)");
+
+var links = document.querySelectorAll('.mainNav__link');
+var btnBurguer = document.querySelector('.hamburgerButton');
 var searchBar = document.querySelector('.mainheader__srchBar');
 var burguerGlass = document.querySelector('.burguerGlass');
 var navTop = document.querySelector('.mainHeader__top');
 var navBottom = document.querySelector('.mainHeader__bottom');
 var productLink = document.querySelectorAll('.productCard--info');
+
+
 var productModal = document.querySelector('.product--modal');
 var modalWrapper = document.querySelector('.product--modalWrapper');
 var mainContent = document.querySelector('.noModal');
+
 var id = document.querySelectorAll('._id');
-var oldId;
 var object = document.querySelectorAll('.object');
+
+var modalBrand = document.querySelector('.modalBrand');
+var modalReference = document.querySelector('.modalReference');
+
+
+var reference = document.querySelectorAll('.productCard--reference');
+var brand = document.querySelectorAll('.productCard--brand');
+
 var hamburguerToggle = false;
 var searchGlassToggle = false;
 var draw = setInterval(draw, 17);
@@ -73,6 +85,28 @@ function draw() {
     }
 }
 
+//change color
+
+
+if (document.location.href.includes("guitar")) {
+    links[0].style.color = "#F25252"
+    links[0].style.textShadow = "0 0 .20px #F25252, 0 0 .20px #F25252, 0 0 .9px #F25252"
+}
+if (document.location.href.includes("bass")) {
+    links[1].style.color = "#F25252"
+    links[1].style.textShadow = "0 0 .20px #F25252, 0 0 .20px #F25252, 0 0 .9px #F25252"
+}
+if (document.location.href.includes("amp")) {
+    links[2].style.color = "#F25252"
+    links[2].style.textShadow = "0 0 .20px #F25252, 0 0 .20px #F25252, 0 0 .9px #F25252"
+}
+if (document.location.href.includes("accessories")) {
+    links[3].style.color = "#F25252"
+    links[3].style.textShadow = "0 0 .20px #F25252, 0 0 .20px #F25252, 0 0 .9px #F25252"
+}
+
+
+
 
 
 //open a modal product
@@ -87,11 +121,19 @@ for (let index = 0; index < productLink.length; index++) {
             modalWrapper.classList.add('enable');
             productModal.classList.add('enable');
             mainContent.classList.add('blur');
+
         }, 0.1)
 
+        setTimeout(function () {
+            modalBrand.textContent = brand[index].textContent;
+            modalReference.textContent = reference[index].textContent;
 
+        }, 800)
 
     });
+
+
+
 }
 
 //close modal
@@ -104,6 +146,8 @@ document.addEventListener("click", function (event) {
         modalWrapper.classList.remove('enable');
         productModal.classList.remove('enable');
         mainContent.classList.remove('blur');
+        modalBrand.textContent = ""
+        modalReference.textContent = ""
 
         setTimeout(function () {
             modalWrapper.style.display = "none"

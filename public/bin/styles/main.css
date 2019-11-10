@@ -1,3 +1,8 @@
+
+
+
+
+
 /* big screens */
 @media (min-width: 1950px) {
     .mainHeader__cover {
@@ -23,7 +28,8 @@
 * {
     margin: 0;
     border-style: hidden;
-
+    user-select: none;
+    
 }
 
 html,
@@ -51,7 +57,7 @@ body {
 }
 
 .mainHeader__navigation {
-
+   
     transition: width .6s 0s ease-out, margin .5s 0s ease-out, box-shadow .5s, background-color 2s;
     background-color: rgba(0, 0, 0, 0.548);
     box-shadow: 0 15px 20px 0 rgb(0, 0, 0);
@@ -91,6 +97,7 @@ body {
     margin-top: 15px;
     width: 100%;
     line-height: 20px;
+   
 }
 
 .mainheader__srchBar {
@@ -125,7 +132,7 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     transition: text-shadow .3s, color .3s;
-
+    user-select: text;
 
 
 }
@@ -279,8 +286,17 @@ body {
     font-family: 'Raleway', sans-serif;
     vertical-align: center;
     font-weight: bold;
-    color: #F25252;
+    color: rgb(255, 0, 0);
     text-decoration: none;
+}
+
+.new__title.white {
+    color: rgb(255, 255, 255);
+}
+
+.new__title.more:hover {
+    text-shadow: 0px 0px 2px #F25252;
+
 }
 
 .new__title>span {
@@ -288,6 +304,16 @@ body {
     position: relative;
     display: inline-block;
 }
+
+
+.new__title.white>span {
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: inline-block;
+}
+
+
+
 
 .new__title>span:before,
 .new__title>span:after {

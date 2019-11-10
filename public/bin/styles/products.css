@@ -14,7 +14,7 @@
 * {
     margin: 0;
     border-style: hidden;
-
+    user-select: none;
 }
 
 html,
@@ -185,7 +185,8 @@ body {
 
 }
 
-.productCard--reference {
+.productCard--reference,
+.productCard--brand {
     text-align: center;
 }
 
@@ -233,7 +234,9 @@ body {
 }
 
 .product--modal {
+    font-family: 'Raleway', sans-serif;
     position: fixed;
+
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -242,7 +245,10 @@ body {
     transition: width .8s ease-in-out, height .8s ease-in-out;
     width: 0;
     height: 0;
+    padding-top: 60px;
+    padding-left: 50px;
 }
+
 
 .product--modal.enable {
 
@@ -261,6 +267,19 @@ body {
     filter: blur(4px);
     transition: blur .5s ease-out;
 }
+
+
+/*-----------------------------INFORMACIÓN----------------------------*/
+.modalBrand {
+    font-size: 20px;
+}
+
+.modalReference {
+    font-size: 40px;
+}
+
+
+
 
 
 
@@ -322,14 +341,16 @@ body {
 
     }
 
-    
+
     .product--modal.enable {
         width: 70%;
-        height: 70%;       
+        height: 70%;
     }
 
 
-}/*medium size screen*/
+}
+
+/*medium size screen*/
 
 
 /*//////////////////////////////////////////////////////////////////////////////////////////
@@ -477,8 +498,7 @@ body {
 
     .product--modal.enable {
         width: 75%;
-        height: 75%;       
+        height: 75%;
     }
 
 }
-
