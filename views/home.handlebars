@@ -1,30 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>GuitarCzar</title>
-    <link rel="stylesheet" href="./mainCoverStyles.css">
-    <link rel="stylesheet" href="./main.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Philosopher&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Hammersmith+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Economica&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./bin/styles/main.css">
 
 </head>
 
-
-
-
 <body>
-
-
 
     <header class="mainHeader mainHeader__cover">
 
@@ -34,7 +16,7 @@
 
             <section class="mainHeader mainHeader__left">
                 <!--Logo-->
-                <a href="#"> <img src="./data/guitarCzar Logo.png" alt="GuitarCzar Logo" class="logo"></a>
+                <a href="/"> <img src="./img/guitarCzar Logo.png" alt="GuitarCzar Logo" class="logo"></a>
 
 
                 <!--hamburger button-->
@@ -57,17 +39,15 @@
                     <input type="text" class="mainHeader mainheader__srchBar"
                         placeholder="Guitarras, Amplificadores, Bajos...">
 
-                    <img src="./data/serchGlass.png" class="burguerGlass" alt="searchIcon">
+                    <img src="./img/serchGlass.png" class="burguerGlass" alt="searchIcon">
                 </section>
 
 
                 <section class="mainHeader mainHeader__bottom">
-
-                    <a href="" class="mainNav mainNav__link">Instrumentos</a>
-                    <a href="" class="mainNav mainNav__link">Amplificadores</a>
-                    <a href="" class="mainNav mainNav__link">Accesorios</a>
-                    <a href="" class="mainNav mainNav__link">Soporte</a>
-
+                    <a href="/products?object=guitar" class="mainNav mainNav__link">Guitars</a>
+                    <a href="/products?object=bass" class="mainNav mainNav__link">Basses</a>
+                    <a href="/products?object=amp" class="mainNav mainNav__link">Amps</a>
+                    <a href="/products?object=accessories" class="mainNav mainNav__link">Accessories</a>
                 </section>
 
             </section>
@@ -77,7 +57,7 @@
 
             <section class="mainHeader mainHeader__right">
                 <!--button -->
-                <a href="#"> <img src="./data/headStock.png" alt="search button"
+                <a href="#"> <img src="./img/headStock.png" alt="search button"
                         class="mainHeader mainHeader__searchButton"> </a>
             </section>
 
@@ -131,38 +111,46 @@
 
 
                     <div class="instruments">
-                        <img class="instrument" src="./data/guitar1.png">
-                        <a class="instrument__link" href="#">Vintera '70s Telecaster™ <br> Thinline</a>
+                        <img class="instrument" src="./img/guitar1.png">
+                        <a class="instrument__link" href="/products?object=guitar&_id=5dc21a1a54ecb55edceb92b3">Vintera
+                            '70s Telecaster™ <br> Thinline</a>
                     </div>
                     <div class="instruments">
-                        <img class="instrument" src="./data/guitar2.png">
-                        <a class="instrument__link" href="#">American Performer<br> Jazzmaster™ </a>
+                        <img class="instrument" src="./img/guitar2.png">
+                        <a class="instrument__link" href="/products?object=guitar&_id=5dc21a1a54ecb55edceb92b5">American
+                            Performer<br> Jazzmaster™ </a>
                     </div>
                     <div class="instruments">
-                        <img class="instrument" src="./data/guitar3.png">
-                        <a class="instrument__link" href="#"> Rarities Flame Koa <br> Top Stratocaster™ </a>
+                        <img class="instrument" src="./img/guitar3.png">
+                        <a class="instrument__link" href="/products?object=guitar&_id=5dc21a1a54ecb55edceb92b1">
+                            Rarities Flame Koa <br> Top Stratocaster™ </a>
 
                     </div>
                     <div class="instruments">
-                        <img class="instrument" src="./data/guitar4.png">
-                        <a class="instrument__link" href="#"> X Series Dinky™ </a>
+                        <img class="instrument" src="./img/guitar4.png">
+                        <a class="instrument__link" href="/products?object=guitar&_id=5dc21a1a54ecb55edceb92be"> X
+                            Series Dinky™ </a>
 
                     </div>
                     <div class="instruments">
-                        <img class="instrument" src="./data/guitar5.png">
-                        <a class="instrument__link" href="#"> Pro Series™ Signature <br> Misha Mansoor </a>
+                        <img class="instrument" src="./img/guitar5.png">
+                        <a class="instrument__link" href="/products?object=guitar&_id=5dc21a1a54ecb55edceb92bd"> Pro
+                            Series™ Signature <br> Misha Mansoor </a>
                     </div>
                     <div class="instruments">
-                        <img class="instrument" src="./data/guitar6.png">
-                        <a class="instrument__link" href="#"> Pro Series™ Monarkh<br> SCG</a>
+                        <img class="instrument" src="./img/guitar6.png">
+                        <a class="instrument__link" href="/products?object=guitar&_id=5dc21a1a54ecb55edceb92aa"> Pro
+                            Series™ Monarkh<br> SCG</a>
                     </div>
 
 
                 </section>
                 <div class="tape__control">
-                    <img src="./data/slider.png" class="left__btn" alt="button">
-                    <img src="./data/slider.png" class="right__btn" alt="button">
+                    <img src="./img/slider.png" class="left__btn" alt="button">
+                    <img src="./img/slider.png" class="right__btn" alt="button">
                 </div>
+
+                <a href="/products" class="new__title">MORE PRODUCTS</a>
             </div>
 
             <div class="hot__product">
@@ -174,28 +162,28 @@
                     <h2 class="new__title"><span>SPECS</span></h2>
 
                     <div class="characteristic">
-                        <img src="./data/mastil.png" class="characteristics__one">
+                        <img src="./img/mastil.png" class="characteristics__one">
                         <p class="characteristics__title one">Kluson Single <br>Line, Single Ring</p>
                     </div>
 
                     <div class="characteristic">
-                        <img src="./data/body.png" class="characteristics__two">
+                        <img src="./img/body.png" class="characteristics__two">
                         <p class="characteristics__title two">Nitrocellulose VOS (Vintage Patina)
-                            </p>
+                        </p>
                     </div>
 
                     <div class="characteristic">
-                        <img src="./data/palanca.png" class="characteristics__three">
-                        <p class="characteristics__title three">CTS 500K Audio Taper Potentiometers, Paper-in-Oil Capacitors</p>
+                        <img src="./img/palanca.png" class="characteristics__three">
+                        <p class="characteristics__title three">CTS 500K Audio Taper Potentiometers, Paper-in-Oil
+                            Capacitors</p>
                     </div>
 
 
-
-
-
-
                 </div>
+
+
             </div>
+
 
 
         </main>
@@ -207,8 +195,7 @@
     <!------------------------------------------------------------------------------------------>
     <!------------------------------------------------------------------------------------------>
     <!------------------------------------------------------------------------------------------>
-    <script src="./mainScript.js"></script>
-    <script src="./mainCoverScript.js"></script>
+    <script src="./bin/scripts/main.js"></script>
 
 </body>
 

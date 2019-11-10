@@ -1,0 +1,110 @@
+<head>
+
+    <title>GuitarCzar - Products</title>
+    <link rel="stylesheet" href="./bin/styles/products.css">
+
+</head>
+
+<body>
+    <div class="noModal">
+        <section class="mainHeader mainHeader__navigation">
+
+
+            <section class="mainHeader mainHeader__left">
+                <!--Logo-->
+                <a href="/"> <img src="./img/guitarCzar Logo.png" alt="GuitarCzar Logo" class="logo"></a>
+
+
+                <!--hamburger button-->
+                <div class="hamburgerButton">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
+            </section>
+
+            <!------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------>
+
+
+            <section class="mainHeader mainHeader__middle">
+
+                <section class="mainHeader mainHeader__top">
+                    <!--search bar-->
+                    <input type="text" class="mainHeader mainheader__srchBar"
+                        placeholder="Guitarras, Amplificadores, Bajos...">
+
+                    <img src="./img/serchGlass.png" class="burguerGlass" alt="searchIcon">
+                </section>
+
+
+                <section class="mainHeader mainHeader__bottom">
+
+                    <a href="/products?object=guitar" class="mainNav mainNav__link">Guitars</a>
+                    <a href="/products?object=bass" class="mainNav mainNav__link">Basses</a>
+                    <a href="/products?object=amp" class="mainNav mainNav__link">Amps</a>
+                    <a href="/products?object=accessories" class="mainNav mainNav__link">Accessories</a>
+
+
+                </section>
+
+            </section>
+
+            <!------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------>
+
+            <section class="mainHeader mainHeader__right">
+                <!--button -->
+                <a href="#"> <img src="./img/headStock.png" alt="search button"
+                        class="mainHeader mainHeader__searchButton">
+                </a>
+            </section>
+
+            <!------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------>
+
+        </section>
+        <!--closes main header navigation-->
+
+        <!--<a href="/addProduct">ADD PRODUCT</a>-->
+
+        <main class="products">
+
+
+            {{#each products}}
+            <div class="productCard">
+
+                <p class="_id">{{_id}}</p>
+                <p class="object">{{object}}</p>
+
+                <img class="productCard--image" src="./img/productos/thumbnails/{{image}}" alt="">
+
+                <div class="productCard--info">
+
+                    <a class="productCard--links">
+                        <p class="productCard--reference">{{brand}} {{series}}</p>
+                        <p class="productCard--reference">{{reference}}</p>
+                        <p class="productCard--price">${{price}}</p>
+                    </a>
+
+                </div>
+            </div>
+
+            {{/each}}
+
+
+        </main>
+
+    </div>
+
+    <div class="product--modalWrapper">
+        <div class="product--modal">
+            <h1>MARCA REFERENCIA </h1>
+            <h1>PRICE</h1>
+
+        </div>
+    </div>
+
+    <script src="./bin/scripts/products.js"></script>
+</body>
