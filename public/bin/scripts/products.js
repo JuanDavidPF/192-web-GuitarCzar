@@ -18,10 +18,12 @@ var object = document.querySelectorAll('.object');
 
 var modalBrand = document.querySelector('.modalBrand');
 var modalReference = document.querySelector('.modalReference');
+var modalPrice = document.querySelector('.modalPrice');
 
 
 var reference = document.querySelectorAll('.productCard--reference');
 var brand = document.querySelectorAll('.productCard--brand');
+
 
 var hamburguerToggle = false;
 var searchGlassToggle = false;

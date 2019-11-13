@@ -236,7 +236,6 @@ body {
 .product--modal {
     font-family: 'Raleway', sans-serif;
     position: fixed;
-
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -245,8 +244,7 @@ body {
     transition: width .8s ease-in-out, height .8s ease-in-out;
     width: 0;
     height: 0;
-    padding-top: 60px;
-    padding-left: 50px;
+
 }
 
 
@@ -271,11 +269,20 @@ body {
 
 /*-----------------------------INFORMACIÓN----------------------------*/
 .modalBrand {
-    font-size: 20px;
+    display: block;
+    font-size: 22px;
+    transition: font-size .7s ease-in-out;
+    padding-top: 60px;
+    padding-left: 50px;
 }
 
+
 .modalReference {
+    display: block;
     font-size: 40px;
+    transition: font-size .7s ease-in-out;
+
+    padding-left: 50px;
 }
 
 
@@ -345,6 +352,17 @@ body {
     .product--modal.enable {
         width: 70%;
         height: 70%;
+    }
+
+    /*-----------------------------INFORMACIÓN----------------------------*/
+    .modalBrand {
+        font-size: 18px;
+        transition: font-size .7s ease-in-out;
+    }
+
+    .modalReference {
+        font-size: 35px;
+        transition: font-size .7s ease-in-out;
     }
 
 
@@ -499,6 +517,17 @@ body {
     .product--modal.enable {
         width: 75%;
         height: 75%;
+    }
+
+    /*-----------------------------INFORMACIÓN----------------------------*/
+    .modalBrand {
+        font-size: 15px;
+        transition: font-size .7s ease-in-out;
+    }
+
+    .modalReference {
+        font-size: 25px;
+        transition: font-size .7s ease-in-out;
     }
 
 }
