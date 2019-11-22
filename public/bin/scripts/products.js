@@ -23,7 +23,7 @@ var modalPrice = document.querySelector('.modalPrice');
 
 var reference = document.querySelectorAll('.productCard--reference');
 var brand = document.querySelectorAll('.productCard--brand');
-
+var price = document.querySelectorAll('.productCard--price');
 
 var hamburguerToggle = false;
 var searchGlassToggle = false;
@@ -129,6 +129,9 @@ for (let index = 0; index < productLink.length; index++) {
         setTimeout(function () {
             modalBrand.textContent = brand[index].textContent;
             modalReference.textContent = reference[index].textContent;
+            modalPrice.textContent = price[index].textContent;
+           
+            modalPrice.style.opacity = "1"
 
         }, 800)
 
@@ -150,6 +153,9 @@ document.addEventListener("click", function (event) {
         mainContent.classList.remove('blur');
         modalBrand.textContent = ""
         modalReference.textContent = ""
+        modalPrice.textContent = ""
+       
+        modalPrice.style.opacity = "0"
 
         setTimeout(function () {
             modalWrapper.style.display = "none"

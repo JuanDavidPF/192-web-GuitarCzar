@@ -3,11 +3,12 @@
     <title>GuitarCzar - Products</title>
     <link rel="stylesheet" href="./bin/styles/products.css">
 
+
 </head>
 
 <body>
-    <div class="noModal">
-        <section class="mainHeader mainHeader__navigation">
+    <div class="noModal ">
+        <section class="mainHeader mainHeader__navigation animated slideInDown ">
 
 
             <section class="mainHeader mainHeader__left">
@@ -69,18 +70,18 @@
 
         <!--<a href="/addProduct">ADD PRODUCT</a>-->
 
-        <main class="products">
+        <main class="products animated pulse">
 
 
             {{#each products}}
-            <div class="productCard">
+            <div class="productCard  animated fadeIn">
 
                 <p class="_id">{{_id}}</p>
                 <p class="object">{{object}}</p>
 
-                <img class="productCard--image" src="./img/productos/thumbnails/{{image}}" alt="">
+                <img class="productCard--image " src="./img/productos/thumbnails/{{image}}" alt="">
 
-                <div class="productCard--info">
+                <div class="productCard--info animated fadeInDown">
 
                     <a class="productCard--links">
                         <p class="productCard--brand">{{brand}} {{series}}</p>
