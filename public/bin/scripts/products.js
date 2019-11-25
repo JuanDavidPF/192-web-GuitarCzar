@@ -2,10 +2,10 @@ var ventanaPequena = window.matchMedia("(max-width: 800px)");
 
 var links = document.querySelectorAll('.mainNav__link');
 var btnBurguer = document.querySelector('.hamburgerButton');
-var searchBar = document.querySelector('.mainheader__srchBar');
-var burguerGlass = document.querySelector('.burguerGlass');
-var navTop = document.querySelector('.mainHeader__top');
-var navBottom = document.querySelector('.mainHeader__bottom');
+var searchBar = document.querySelectorAll('.mainheader__srchBar');
+var burguerGlass = document.querySelectorAll('.burguerGlass');
+var navTop = document.querySelectorAll('.mainHeader__top');
+var navBottom = document.querySelectorAll('.mainHeader__bottom');
 var productLink = document.querySelectorAll('.productCard--info');
 
 
@@ -13,17 +13,26 @@ var productModal = document.querySelector('.product--modal');
 var modalWrapper = document.querySelector('.product--modalWrapper');
 var mainContent = document.querySelector('.noModal');
 
-var id = document.querySelectorAll('._id');
-var object = document.querySelectorAll('.object');
 
 var modalBrand = document.querySelector('.modalBrand');
 var modalReference = document.querySelector('.modalReference');
 var modalPrice = document.querySelector('.modalPrice');
+var modalImg = document.querySelector('.infoImg');
+var modalDes = document.querySelector('.infoDes');
 
-
+var id = document.querySelectorAll('._id');
+var object = document.querySelectorAll('.object');
+var fav = document.querySelectorAll('.fav');
+var des = document.querySelectorAll('.descripcion');
 var reference = document.querySelectorAll('.productCard--reference');
 var brand = document.querySelectorAll('.productCard--brand');
 var price = document.querySelectorAll('.productCard--price');
+var imgCard = document.querySelectorAll('.productCard--image')
+
+var corazon = document.querySelectorAll(".corazon")
+
+var cartCounter = document.querySelector(".contador")
+let contador = 0;
 
 var hamburguerToggle = false;
 var searchGlassToggle = false;
@@ -42,7 +51,7 @@ btnBurguer.addEventListener("click", function () {
 
 //opening the search bar from hamburguer meno
 
-burguerGlass.addEventListener("click", function () {
+burguerGlass[1].addEventListener("click", function () {
     searchGlassToggle = !searchGlassToggle;
 
 });
@@ -54,25 +63,25 @@ function draw() {
 
 
         if (searchGlassToggle) {
-            searchBar.style.width = '60%';
-            searchBar.style.opacity = '1';
-            searchBar.style.transition = 'width .7s';
-            burguerGlass.style.marginLeft = '70%';
+            searchBar[1].style.width = '60%';
+            searchBar[1].style.opacity = '1';
+            searchBar[1].style.transition = 'width .7s';
+            burguerGlass[1].style.marginLeft = '70%';
 
         } else {
-            searchBar.style.width = '0%';
-            searchBar.style.opacity = '0';
-            searchBar.style.transition = 'width .7s, opacity 0s .7s';
-            burguerGlass.style.marginLeft = '0px';
+            searchBar[1].style.width = '0%';
+            searchBar[1].style.opacity = '0';
+            searchBar[1].style.transition = 'width .7s, opacity 0s .7s';
+            burguerGlass[1].style.marginLeft = '0px';
 
         }
 
         if (hamburguerToggle) {
-            navTop.style.top = '75px';
-            navBottom.style.top = '110px';
+            navTop[1].style.top = '75px';
+            navBottom[1].style.top = '110px';
         } else if (hamburguerToggle == false) {
-            navTop.style.top = '-125px';
-            navBottom.style.top = '-180px';
+            navTop[1].style.top = '-125px';
+            navBottom[1].style.top = '-180px';
         }
 
 
@@ -130,15 +139,15 @@ for (let index = 0; index < productLink.length; index++) {
             modalBrand.textContent = brand[index].textContent;
             modalReference.textContent = reference[index].textContent;
             modalPrice.textContent = price[index].textContent;
-           
+            modalDes.textContent = des[index].textContent;
+            modalImg.src = imgCard[index].src;
+            modalImg.style.opacity = "1"
             modalPrice.style.opacity = "1"
+            modalDes.style.opacity = "1"
 
         }, 800)
 
     });
-
-
-
 }
 
 //close modal
@@ -146,7 +155,7 @@ for (let index = 0; index < productLink.length; index++) {
 document.addEventListener("click", function (event) {
 
 
-    if (event.target == modalWrapper) {
+    if (event.target == modalWrapper || event.target == modalPrice) {
 
         modalWrapper.classList.remove('enable');
         productModal.classList.remove('enable');
@@ -154,8 +163,13 @@ document.addEventListener("click", function (event) {
         modalBrand.textContent = ""
         modalReference.textContent = ""
         modalPrice.textContent = ""
-       
+        modalDes.textContent = ""
+        modalImg.src = ""
+
         modalPrice.style.opacity = "0"
+        modalImg.style.opacity = "0"
+        modalDes.style.opacity = "0"
+
 
         setTimeout(function () {
             modalWrapper.style.display = "none"
@@ -166,4 +180,142 @@ document.addEventListener("click", function (event) {
 
     }
 
+})
+
+//open description
+let desVisible = true
+
+modalImg.addEventListener("click", function () {
+    desVisible = !desVisible
+
+    if (ventanaPequena.matches) {
+        if (desVisible) {
+            modalDes.classList.add("fadeIn")
+
+            setTimeout(function () {
+                modalDes.classList.remove("fadeOut")
+
+                modalDes.style.display = "block"
+            }, 500)
+
+        } else if (desVisible == false) {
+            modalDes.classList.add("fadeOut")
+
+
+            setTimeout(function () {
+                modalDes.classList.remove("fadeOut")
+
+                modalDes.style.display = "none"
+            }, 500)
+
+
+        }
+    }
+})
+
+
+/////////////////////////////////////
+/////////////////////////////////////
+/////////////////////////////////////
+
+
+let favOrNot = [fav.length]
+
+for (let i = 0; i < fav.length; i++) {
+
+    favOrNot[i] = (fav[i].textContent == "true")
+
+
+    if (favOrNot[i]) {
+
+        corazon[i].src = "./img/fav2.png"
+    }
+    if (favOrNot[i] == false) {
+
+        corazon[i].src = "./img/fav1.png"
+
+    }
+
+}
+
+
+
+
+
+
+for (let i = 0; i < corazon.length; i++) {
+
+    corazon[i].addEventListener("click", function () {
+
+        favOrNot[i] = !favOrNot[i]
+
+        if (favOrNot[i]) {
+            corazon[i].src = "./img/fav2.png"
+            corazon[i].classList.add("bounceIn")
+
+        }
+
+        if (favOrNot[i] == false) {
+            corazon[i].src = "./img/fav1.png"
+            corazon[i].classList.add("bounceOut")
+
+        }
+
+        let removerAnimacion = setTimeout(function () {
+
+            corazon[i].classList.remove("bounceIn")
+            corazon[i].classList.remove("bounceOut")
+        }, 1000)
+
+
+
+        fetch(`/api/favoritos`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: `_id=${id[i].textContent}&fav=${favOrNot[i].toString()}`,
+
+
+
+        }) ///cierra el fetch 
+    }) //cierra el listener de corazones
+}
+
+
+//buying products
+
+
+modalPrice.addEventListener("click", function () {
+
+    contador += 1
+
+    let price = modalPrice.textContent.split("$")
+    price = price[1]
+
+
+    setTimeout(function () {
+        cartCounter.textContent = contador
+        cartCounter.style.opacity = "1"
+        cartCounter.classList.add("bounceIn")
+    }, 500)
+
+    setTimeout(function () {
+        cartCounter.classList.remove("bounceIn")
+    }, 1300)
+
+
+    let imgShop = modalImg.src.split("/thumbnails/")
+    imgShop = imgShop[1]
+
+    fetch(`/api/comprarProducto`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: `brand=${modalBrand.textContent}&reference=${modalReference.textContent}&price=${price}&image=${imgShop}`,
+
+
+
+    }) ///cierra el fetch 
 })

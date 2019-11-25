@@ -28,7 +28,6 @@
             <!------------------------------------------------------------------------------------------>
             <!------------------------------------------------------------------------------------------>
 
-
             <section class="mainHeader mainHeader__middle">
 
                 <section class="mainHeader mainHeader__top">
@@ -52,6 +51,7 @@
 
             </section>
 
+
             <!------------------------------------------------------------------------------------------>
             <!------------------------------------------------------------------------------------------>
 
@@ -72,12 +72,26 @@
 
         <main class="products animated pulse">
 
+            <div class="contenedorCarrito">
+
+                <a href="./cart"> <img src="./img/carrito.png" class="carrito"></a>
+                <div class="contador animated"></div>
+
+
+            </div>
+
 
             {{#each products}}
+
+
+
             <div class="productCard  animated fadeIn">
 
+                <img class="corazon animated">
                 <p class="_id">{{_id}}</p>
                 <p class="object">{{object}}</p>
+                <p class="descripcion"> {{des}} </p>
+                <p class="fav">{{fav}}</p>
 
                 <img class="productCard--image " src="./img/productos/thumbnails/{{image}}" alt="">
 
@@ -96,6 +110,8 @@
 
 
         </main>
+        <a href="#"> <img src="./img/up.png" class="up"></a>
+
 
     </div>
 
@@ -103,10 +119,40 @@
         <div class="product--modal">
             <h1 class="modalBrand"></h1>
             <h1 class="modalReference"></h1>
+
+            <div class="info">
+
+                <img class="infoImg">
+                <p class="infoDes animated"></p>
+
+            </div>
+
             <h1 class="modalPrice"></h1>
 
         </div>
     </div>
+
+    <section class="mainHeader mainHeader__middle double">
+
+        <section class="mainHeader mainHeader__top">
+            <!--search bar-->
+            <input type="text" class="mainHeader mainheader__srchBar" placeholder="Guitarras, Amplificadores, Bajos...">
+
+            <img src="./img/serchGlass.png" class="burguerGlass" alt="searchIcon">
+        </section>
+
+
+        <section class="mainHeader mainHeader__bottom">
+
+            <a href="/products?object=guitar" class="mainNav mainNav__link">Guitars</a>
+            <a href="/products?object=bass" class="mainNav mainNav__link">Basses</a>
+            <a href="/products?object=amp" class="mainNav mainNav__link">Amps</a>
+            <a href="/products?object=accessories" class="mainNav mainNav__link">Accessories</a>
+
+
+        </section>
+
+    </section>
 
     <script src="./bin/scripts/products.js"></script>
 </body>

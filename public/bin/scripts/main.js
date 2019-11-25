@@ -1,4 +1,3 @@
-
 var mainCover = document.querySelector('.mainHeader__cover');
 var headerLeft = document.querySelector('.mainHeader__left');
 var bulletCover0 = document.querySelector('#firstBullet');
@@ -34,7 +33,6 @@ var draw = setInterval(draw, 17);
 var contador = 0;
 
 
-
 function hiloCoverSlideShow() {
     counterCover++;
     if (counterCover == 5) counterCover = 0;
@@ -52,7 +50,7 @@ function hiloCoverSlideShow() {
 
 
 function draw() {
-   
+
 
     mainCover.style.backgroundPositionX = fondoX + '%';
 
@@ -106,7 +104,7 @@ function draw() {
 
     }
 
-//hamburguer menu
+    //hamburguer menu
 
     if (ventanaPequena.matches) {
 
@@ -143,7 +141,7 @@ function draw() {
 
     }
 
-    
+
     if (ventanaGrande.matches) {
         contador = 0;
         guitarTape.style.left = '0%';
@@ -162,98 +160,121 @@ function draw() {
 
     }
 
+    document.addEventListener("click", function (e) {
+        console.log(e.target)
+    })
+
+
 
     //iinteraction of hot of the month with the scroll
 
     if (ventanaGrande.matches) {
-        //mastil
-        if (pageYOffset < 1700) {
 
-            titleOne.style.opacity = '0';
-            mastil.style.marginLeft = '-1200px';
+
+        //mastil
+        if (pageYOffset < 1985) {
+
+            mastil.classList.remove("slideInLeft")
+            mastil.classList.add("slideOutLeft")
         }
-        if (pageYOffset > 1700 && pageYOffset < 2254) {
-            titleOne.style.opacity = '1';
-            mastil.style.marginLeft = '-20px';
+        if (pageYOffset > 1985 && pageYOffset < 2240) {
+            mastil.classList.remove("slideOutLeft")
+            mastil.classList.add("slideInLeft")
+
         }
-        if (pageYOffset > 2254) {
-            titleOne.style.opacity = '0';
-            mastil.style.marginLeft = '-1200px';
+        if (pageYOffset > 2540) {
+            mastil.classList.remove("slideInLeft")
+            mastil.classList.add("slideOutLeft")
+
         }
         //body
 
 
-        if (pageYOffset < 2091) {
-            titleTwo.style.opacity = '0';
-            body.style.marginLeft = '-1200px';
+        if (pageYOffset < 2440) {
+            body.classList.remove("slideInLeft")
+            body.classList.add("slideOutLeft")
+
         }
-        if (pageYOffset > 2091 && pageYOffset < 2890) {
-            titleTwo.style.opacity = '1';
-            body.style.marginLeft = '-20px';
+        if (pageYOffset > 2440 && pageYOffset < 3050) {
+            body.classList.add("slideInLeft")
+            body.classList.remove("slideOutLeft")
+
         }
-        if (pageYOffset > 2890) {
-            titleTwo.style.opacity = '0';
-            body.style.marginLeft = '-1200px';
+        if (pageYOffset > 3050) {
+            body.classList.remove("slideInLeft")
+            body.classList.add("slideOutLeft")
+
         }
 
         //palanca
-        if (pageYOffset < 2570) {
-            titleThree.style.opacity = '0';
-            palanca.style.marginLeft = '-1200px';
+        if (pageYOffset < 2880) {
+            palanca.classList.remove("slideInLeft")
+            palanca.classList.add("slideOutLeft")
+
         }
-        if (pageYOffset > 2570 && pageYOffset < 3254) {
-            titleThree.style.opacity = '1';
-            palanca.style.marginLeft = '-20px';
+        if (pageYOffset > 2880 && pageYOffset < 3400) {
+            palanca.classList.remove("slideOutLeft")
+            palanca.classList.add("slideInLeft")
+
         }
-        if (pageYOffset > 3200) {
-            titleThree.style.opacity = '0';
-            palanca.style.marginLeft = '-1200px';
+        if (pageYOffset > 3400) {
+            palanca.classList.remove("slideInLeft")
+            palanca.classList.add("slideOutLeft")
+
         }
 
     } else if (ventanaMediana.matches) {
 
         //mastil
-        if (pageYOffset < 1588) {
-            titleOne.style.opacity = '0';
-            mastil.style.marginLeft = '-1200px';
+        if (pageYOffset < 1810) {
+            mastil.classList.remove("slideInLeft")
+            mastil.classList.add("slideOutLeft")
+
         }
-        if (pageYOffset > 1588 && pageYOffset < 2277) {
-            titleOne.style.opacity = '1';
-            mastil.style.marginLeft = '-20px';
+        if (pageYOffset > 1810 && pageYOffset < 2430) {
+            mastil.classList.remove("slideOutLeft")
+            mastil.classList.add("slideInLeft")
+
         }
-        if (pageYOffset > 2277) {
-            titleOne.style.opacity = '0';
-            mastil.style.marginLeft = '-1200px';
+        if (pageYOffset > 2430) {
+            mastil.classList.remove("slideInLeft")
+            mastil.classList.add("slideOutLeft")
         }
 
         //body
 
 
-        if (pageYOffset < 2029) {
-            titleTwo.style.opacity = '0';
-            body.style.marginLeft = '-1200px';
+        if (pageYOffset < 2100) {
+            body.classList.remove("slideInLeft")
+            body.classList.add("slideOutLeft")
+
         }
-        if (pageYOffset > 2029 && pageYOffset < 2729) {
-            titleTwo.style.opacity = '1';
-            body.style.marginLeft = '-20px';
+        if (pageYOffset > 2100 && pageYOffset < 2660) {
+            body.classList.add("slideInLeft")
+            body.classList.remove("slideOutLeft")
+
         }
-        if (pageYOffset > 2729) {
-            titleTwo.style.opacity = '0';
-            body.style.marginLeft = '-1200px';
+        if (pageYOffset > 2660) {
+            body.classList.remove("slideInLeft")
+            body.classList.add("slideOutLeft")
+
         }
 
         //palanca
-        if (pageYOffset < 2329) {
-            titleThree.style.opacity = '0';
-            palanca.style.marginLeft = '-1200px';
+        if (pageYOffset < 2350) {
+            palanca.classList.remove("slideInLeft")
+            palanca.classList.add("slideOutLeft")
+
         }
-        if (pageYOffset > 2339 && pageYOffset < 2929) {
-            titleThree.style.opacity = '1';
-            palanca.style.marginLeft = '-20px';
+        if (pageYOffset > 2350 && pageYOffset < 2940) {
+            palanca.classList.remove("slideOutLeft")
+            palanca.classList.add("slideInLeft")
+
         }
-        if (pageYOffset > 2929) {
-            titleThree.style.opacity = '0';
-            palanca.style.marginLeft = '-1200px';
+        if (pageYOffset > 2940) {
+            palanca.classList.remove("slideInLeft")
+            palanca.classList.add("slideOutLeft")
+
         }
 
     } else if (ventanaPequena.matches) {
@@ -262,47 +283,55 @@ function draw() {
         titleThree.style.opacity = '1';
 
         //mastil
-        if (pageYOffset < 1320) {
-
-            mastil.style.marginLeft = '-1200px';
+        if (pageYOffset < 1600) {
+            mastil.classList.remove("slideInLeft")
+            mastil.classList.add("slideOutLeft")
         }
-        if (pageYOffset > 1320 && pageYOffset < 1830) {
+        if (pageYOffset > 1600 && pageYOffset < 2031) {
 
-            mastil.style.marginLeft = '-20px';
+            mastil.classList.remove("slideOutLeft")
+            mastil.classList.add("slideInLeft")
+
         }
-        if (pageYOffset > 1830) {
+        if (pageYOffset > 2031) {
+            mastil.classList.remove("slideInLeft")
+            mastil.classList.add("slideOutLeft")
 
-            mastil.style.marginLeft = '-1200px';
         }
 
         //body
 
 
-        if (pageYOffset < 1630) {
+        if (pageYOffset < 2010) {
+            body.classList.remove("slideInLeft")
+            body.classList.add("slideOutLeft")
 
-            body.style.marginLeft = '-1200px';
         }
-        if (pageYOffset > 1630 && pageYOffset < 2160) {
+        if (pageYOffset > 2010 && pageYOffset < 2450) {
+            body.classList.add("slideInLeft")
+            body.classList.remove("slideOutLeft")
 
-            body.style.marginLeft = '-20px';
         }
-        if (pageYOffset > 2160) {
+        if (pageYOffset > 2450) {
+            body.classList.remove("slideInLeft")
+            body.classList.add("slideOutLeft")
 
-            body.style.marginLeft = '-1200px';
         }
 
         //palanca
-        if (pageYOffset < 2244) {
+        if (pageYOffset < 2430) {
+            palanca.classList.remove("slideInLeft")
+            palanca.classList.add("slideOutLeft")
 
-            palanca.style.marginLeft = '-1200px';
         }
-        if (pageYOffset > 2244 && pageYOffset < 2690) {
+        if (pageYOffset > 2430 && pageYOffset < 2840) {
+            palanca.classList.remove("slideOutLeft")
+            palanca.classList.add("slideInLeft")
 
-            palanca.style.marginLeft = '-20px';
         }
-        if (pageYOffset > 2690) {
-
-            palanca.style.marginLeft = '-1200px';
+        if (pageYOffset > 2840) {
+            palanca.classList.remove("slideInLeft")
+            palanca.classList.add("slideOutLeft")
         }
 
     }
