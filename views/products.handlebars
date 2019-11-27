@@ -68,12 +68,50 @@
         </section>
         <!--closes main header navigation-->
 
-        <!--<a href="/addProduct">ADD PRODUCT</a>-->
+
+
 
         <main class="products animated pulse">
 
-            <div class="contenedorCarrito">
 
+
+
+            <div class=" contenedorCarrito">
+
+
+                <div class="filters">
+
+
+                    <input list="product" placeholder="Product" class="lista productFilter">
+
+                    <datalist id="product">
+                        <option value="Guitar">
+                        <option value="Bass">
+                        <option value="Amp">
+                        <option value="Accessories"></option>
+                    </datalist>
+
+                    <input list="brands" placeholder="Brand" class="lista brandFilter">
+
+                    <datalist id="brands">
+                        <option value="Jackson">
+                        <option value="Dean">
+                        <option value="Fender">
+                        <option value="Gibson">
+                        <option value="Line6">
+                        <option value="VOX">
+                        <option value="D'Addarío">
+                        <option value="JimDunlop">
+                        <option value="Ibanez">
+                        <option value="ErnieBall"></option>
+                    </datalist>
+
+                    <div class="searchBtn">SEARCH</div>
+
+                </div>
+
+
+                <img src="./img/fav2.png" class="favFilter">
                 <a href="./cart"> <img src="./img/carrito.png" class="carrito"></a>
                 <div class="contador animated"></div>
 

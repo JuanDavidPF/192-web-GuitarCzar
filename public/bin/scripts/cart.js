@@ -13,6 +13,7 @@ var producto = document.querySelectorAll('.productCard')
 var price = document.querySelectorAll(".productCard--price")
 var contador = document.querySelector(".contador");
 var id = document.querySelectorAll('._id');
+
 var carrito = document.querySelector(".carrito")
 var equis = document.querySelector(".modalX")
 var btn = document.querySelector(".nextBtn")
@@ -142,6 +143,9 @@ if (document.location.href.includes("accessories")) {
 }
 
 
+
+
+
 //priceCalculator
 
 for (let i = 0; i < price.length; i++) {
@@ -153,9 +157,6 @@ for (let i = 0; i < price.length; i++) {
     contador.textContent = "$" + costo
 
 }
-
-
-
 
 
 //deleting products

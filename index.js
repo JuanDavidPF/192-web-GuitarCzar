@@ -93,7 +93,11 @@ app.get('/products', function (req, res) {
 
     const collection = db.collection('products');
 
-    if (req.query.object != undefined) {
+
+
+    //object filters  
+
+    if (req.query.object != undefined && req.query.fav == undefined && req.query.brand == undefined) {
         collection.find({
 
             object: {
@@ -108,14 +112,66 @@ app.get('/products', function (req, res) {
                 res.send(err);
                 return;
             }
-            var variables = {
+            let variables = {
                 products: docs,
-
-
             }
             res.render('products', variables);
         });
-    } else {
+    }
+
+
+    /*fav filters*/
+    if (req.query.object == undefined && req.query.fav != undefined && req.query.brand == undefined) {
+        collection.find({
+
+            fav: {
+                '$eq': req.query.fav
+            }
+
+
+        }).toArray(function (err, docs) {
+            assert.equal(null, err);
+            if (err) {
+                console.error(err);
+                res.send(err);
+                return;
+            }
+            let variables = {
+                products: docs,
+            }
+            res.render('products', variables);
+        });
+    }
+
+
+    /*filters */
+    if (req.query.object != undefined && req.query.fav == undefined && req.query.brand != undefined) {
+        collection.find({
+
+            object: {
+                '$eq': req.query.object
+            },
+            brand: {
+                '$eq': req.query.brand
+            }
+
+        }).toArray(function (err, docs) {
+            assert.equal(null, err);
+            if (err) {
+                console.error(err);
+                res.send(err);
+                return;
+            }
+            let variables = {
+                products: docs,
+            }
+            res.render('products', variables);
+        });
+    }
+
+
+    /* no filters*/
+    if (req.query.object == undefined && req.query.fav == undefined && req.query.brand == undefined) {
         collection.find({}).toArray(function (err, docs) {
             assert.equal(null, err);
             if (err) {
@@ -123,14 +179,11 @@ app.get('/products', function (req, res) {
                 res.send(err);
                 return;
             }
-            var variables = {
+            let variables = {
                 products: docs,
-
             }
             res.render('products', variables);
         });
-
-
     }
 
     //////////////////////////////////////////////////////////
@@ -253,7 +306,16 @@ app.post('/api/nuevoRecibo', function (request, response) {
 });
 
 
+//borrar items al carrito
+app.get('/borrarTodo', function (request, response) {
 
+    const coleccion = db.collection('products');
+
+    coleccion.remove();
+    response.render('products');
+
+
+});
 
 
 
@@ -276,8 +338,8 @@ app.get('/addProduct', function (req, res) {
         },
         {
             object: "amp",
-            brand: "Line 6",
-            series: "Spider V",
+            brand: "Line6",
+            series: "SpiderV",
             reference: "240 MkII",
             price: 549,
             image: "spiderv240.png",
@@ -424,7 +486,7 @@ app.get('/addProduct', function (req, res) {
         },
         {
             object: "accessories",
-            brand: "Jim Dunlop",
+            brand: "JimDunlop",
             reference: "Celluloid guitar pick X12",
             price: 6,
             image: "dunlopcelluloidpick.png",
@@ -452,8 +514,8 @@ app.get('/addProduct', function (req, res) {
         },
         {
             object: "accessories",
-            brand: "D'Addarío guitar pick",
-            reference: "Duralin black ice X10",
+            brand: "D'Addarío",
+            reference: "guitar pick Duralin black ice X10",
             price: 5,
             image: "addarioduralinpick.png",
             fav: "false",
@@ -485,7 +547,7 @@ app.get('/addProduct', function (req, res) {
         },
         {
             object: "amp",
-            brand: "Line 6",
+            brand: "Line6",
             series: "Spider V",
             reference: "120 MkII",
             price: 429,
@@ -525,7 +587,7 @@ app.get('/addProduct', function (req, res) {
         }
 
 
-        res.send("Added a product succesfully");
+        res.render('products');
 
     });
 

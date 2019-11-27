@@ -29,15 +29,21 @@ var brand = document.querySelectorAll('.productCard--brand');
 var price = document.querySelectorAll('.productCard--price');
 var imgCard = document.querySelectorAll('.productCard--image')
 
+var brandFilter = document.querySelector(".brandFilter")
+var productFilter = document.querySelector(".productFilter")
+
+var favFilter = document.querySelector(".favFilter")
 var corazon = document.querySelectorAll(".corazon")
 
 var cartCounter = document.querySelector(".contador")
+
+var searchBtn = document.querySelector(".searchBtn")
+
 let contador = 0;
 
 var hamburguerToggle = false;
 var searchGlassToggle = false;
 var draw = setInterval(draw, 17);
-
 
 
 
@@ -86,9 +92,9 @@ function draw() {
 
 
     } else {
-        searchBar.style.transition = 'width 0s, opacity 0s 0s';
-        searchBar.style.width = '100%';
-        searchBar.style.opacity = '1';
+        searchBar[1].style.transition = 'width 0s, opacity 0s 0s';
+        searchBar[1].style.width = '100%';
+        searchBar[1].style.opacity = '1';
         if (hamburguerToggle) btnBurguer.classList.toggle("change");
         hamburguerToggle = false;
         searchGlassToggle = false;
@@ -116,6 +122,30 @@ if (document.location.href.includes("accessories")) {
     links[3].style.textShadow = "0 0 .20px #F25252, 0 0 .20px #F25252, 0 0 .9px #F25252"
 }
 
+
+
+
+//filter the products by  favoriir
+
+favFilter.addEventListener("click", function () {
+
+    document.location.href = "/products?fav=true"
+
+})
+
+
+
+searchBtn.addEventListener("click", function () {
+
+    let brand = brandFilter.value;
+    let product = productFilter.value.toLowerCase();
+
+    if (brand.length > 0 && product.length>0) {
+
+        document.location.href = "/products?object=" + product + "&brand=" + brand
+    }
+
+})
 
 
 
