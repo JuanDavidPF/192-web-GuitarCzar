@@ -9,7 +9,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     scroll-behavior: smooth;
 
@@ -127,10 +127,37 @@ body {
 }
 
 
+.contenedorCarrito {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    left: 82%;
+    width: 100%;
+    height: 100px;
+
+
+}
+
+
+.carrito {
+    cursor: pointer;
+    width: 60px;
+    margin-right: 30px;
+}
+
+.contador {
+    color: #F25252;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+
+}
+
 .products {
 
     display: flex;
-
     flex-flow: row wrap;
     justify-content: center;
 }
@@ -143,7 +170,7 @@ body {
     width: 250px;
     height: 460px;
     box-shadow: 0px 12px 7px rgb(216, 216, 216);
-    transition: box-shadow .5s;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 
 }
 
@@ -182,7 +209,7 @@ body {
 
 .productCard--links {
     text-decoration: none;
-
+    transition: font-size 0.5s ease-in-out;
 }
 
 .descripcion {
@@ -195,6 +222,7 @@ body {
     display: block;
     height: 65%;
     margin: auto;
+    transition: height 0.5s ease-in-out;
 }
 
 
@@ -208,6 +236,75 @@ body {
     margin-top: 10px;
     text-align: center;
     font-size: 25px;
+    transition: font-size 0.5s ease-in-out;
+
+}
+
+
+/*product modal*/
+
+.product--modalWrapper {
+    display: none;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    transition: opacity .5s ease-in-out;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 17, 27, 0.842);
+}
+
+.product--modalWrapper.enable {
+    display: flex;
+    transition: opacity .5s ease-out;
+    opacity: 1;
+
+}
+
+
+.product--modal {
+    font-family: 'Raleway', sans-serif;
+
+    transition: width .8s ease-in-out, height .8s ease-in-out;
+    width: 0;
+    height: 0;
+
+
+}
+
+.outer {
+    margin-top: 50px;
+    padding-top: 50px;
+    display: flex;
+    background-color: white;
+    height: 700px;
+    width: 100%;
+
+
+    justify-content: center;
+    box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.322);
+}
+
+.product--modal.enable {
+
+    display: flex;
+    height: 100%;
+    width: 75%;
+    transition: width .8s ease-in-out, height .8s ease-in-out;
+
+
+}
+
+.noModal {
+    filter: blur(0px);
+    transition: filter .5s ease-out;
+
+}
+
+.noModal.blur {
+    filter: blur(4px);
+    transition: filter .5s ease-out;
 }
 
 
@@ -241,7 +338,79 @@ body {
     left: 20px;
 }
 
+.delete.modalX {
+    right: 40px;
+    top: 50px;
 
+    position: absolute;
+
+
+}
+
+.inputs {
+    margin-top: 50px;
+}
+
+
+.identity,
+.contact,
+.location {
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 70px;
+}
+
+.input {
+
+    border-bottom: 1px solid rgb(131, 131, 131);
+    height: 30px;
+    width: 50%;
+    font-size: 17px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+
+}
+
+.inputAndText {
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+.backBtn,
+.nextBtn {
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+    background-color: #F25252;
+    text-align: center;
+    line-height: 50px;
+    width: 100px;
+    height: 50px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.411);
+
+    margin-bottom: 20px;
+}
+
+.billName {
+    font-size: 20px;
+}
+
+.priceTotal {
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.total {
+    color: red;
+    font-weight: 800;
+    font-size: 35px;
+    margin-bottom: 50px;
+
+}
 
 /*//////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -300,6 +469,8 @@ body {
         width: 60px;
 
     }
+
+
 }
 
 
@@ -460,5 +631,39 @@ body {
     }
 
 
+
+    .titulo {
+        font-size: 25px;
+    }
+
+
+    .identity,
+    .contact,
+    .location {
+
+        flex-direction: column;
+        margin-bottom: 20px;
+
+    }
+
+    .inputs {
+        margin-top: 20px;
+    }
+
+    .input {
+        width: 100%;
+
+    }
+
+
+    .backBtn,
+    .nextBtn {
+
+        font-size: 15px;
+        line-height: 40px;
+        width: 80px;
+        height: 40px;
+
+    }
 
 }

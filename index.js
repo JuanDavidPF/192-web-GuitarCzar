@@ -211,6 +211,52 @@ app.post('/api/comprarProducto', function (request, response) {
 });
 
 
+//borrar items al carrito
+app.post('/api/borrarProducto', function (request, response) {
+
+    const coleccion = db.collection('cart');
+
+    coleccion.deleteOne({
+
+        "_id": ObjectId(request.body._id)
+    });
+    response.send("Producto borrado del carrito");
+
+
+});
+
+
+//agregar recibo
+app.post('/api/nuevoRecibo', function (request, response) {
+
+    const coleccion = db.collection('bills');
+    const carrito = db.collection('cart');
+
+
+    let bill = {
+
+        name: request.body.name,
+        phone: request.body.phone,
+        email: request.body.email,
+        country: request.body.country,
+        state: request.body.state,
+        city: request.body.city,
+        total: request.body.total
+    };
+
+    coleccion.insertOne(bill, {});
+    response.send("Compra efefctuada");
+
+    carrito.remove();
+
+
+});
+
+
+
+
+
+
 
 
 app.get('/addProduct', function (req, res) {

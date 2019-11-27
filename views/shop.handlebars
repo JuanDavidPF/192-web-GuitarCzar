@@ -7,27 +7,116 @@
 </head>
 
 <body>
-    <section class="mainHeader mainHeader__navigation animated slideInDown ">
+    <div class="noModal ">
 
 
-        <section class="mainHeader mainHeader__left">
-            <!--Logo-->
-            <a href="/"> <img src="./img/guitarCzar Logo.png" alt="GuitarCzar Logo" class="logo"></a>
+
+        <section class="mainHeader mainHeader__navigation animated slideInDown ">
 
 
-            <!--hamburger button-->
-            <div class="hamburgerButton">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
+            <section class="mainHeader mainHeader__left">
+                <!--Logo-->
+                <a href="/"> <img src="./img/guitarCzar Logo.png" alt="GuitarCzar Logo" class="logo"></a>
+
+
+                <!--hamburger button-->
+                <div class="hamburgerButton">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
+            </section>
+
+            <!------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------>
+
+            <section class="mainHeader mainHeader__middle">
+
+                <section class="mainHeader mainHeader__top">
+                    <!--search bar-->
+                    <input type="text" class="mainHeader mainheader__srchBar"
+                        placeholder="Guitarras, Amplificadores, Bajos...">
+
+                    <img src="./img/serchGlass.png" class="burguerGlass" alt="searchIcon">
+                </section>
+
+
+                <section class="mainHeader mainHeader__bottom">
+
+                    <a href="/products?object=guitar" class="mainNav mainNav__link">Guitars</a>
+                    <a href="/products?object=bass" class="mainNav mainNav__link">Basses</a>
+                    <a href="/products?object=amp" class="mainNav mainNav__link">Amps</a>
+                    <a href="/products?object=accessories" class="mainNav mainNav__link">Accessories</a>
+
+
+                </section>
+
+            </section>
+
+
+            <!------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------>
+
+            <section class="mainHeader mainHeader__right">
+                <!--button -->
+                <a href="#"> <img src="./img/headStock.png" alt="search button"
+                        class="mainHeader mainHeader__searchButton">
+                </a>
+            </section>
+
+            <!------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------>
 
         </section>
 
-        <!------------------------------------------------------------------------------------------>
-        <!------------------------------------------------------------------------------------------>
 
-        <section class="mainHeader mainHeader__middle">
+
+
+        <main class="products animated pulse">
+
+            <div class="contenedorCarrito">
+                <div class="contador animated">0</div>
+                <img src="./img/carrito.png" class="carrito">
+
+
+
+            </div>
+
+            {{#each products}}
+
+            <div class="productCard  animated fadeIn">
+
+                <div class="delete">x</div>
+                <p class="_id">{{_id}}</p>
+                <p class="object">{{object}}</p>
+                <p class="descripcion"> {{des}} </p>
+                <p class="fav">{{fav}}</p>
+
+                <img class="productCard--image" src="./img/productos/thumbnails/{{image}}" alt="">
+
+                <div class="productCard--info animated fadeInDown">
+
+                    <a class="productCard--links">
+                        <p class="productCard--brand">{{brand}} {{series}}</p>
+                        <p class="productCard--reference">{{reference}}</p>
+                        <p class="productCard--price">${{price}}</p>
+                    </a>
+
+                </div>
+            </div>
+
+            {{/each}}
+
+
+        </main>
+
+
+        <a href="#"> <img src="./img/up.png" class="up"></a>
+
+
+
+        <section class="mainHeader mainHeader__middle double">
 
             <section class="mainHeader mainHeader__top">
                 <!--search bar-->
@@ -50,84 +139,97 @@
 
         </section>
 
+    </div>
 
-        <!------------------------------------------------------------------------------------------>
-        <!------------------------------------------------------------------------------------------>
+    <div class="product--modalWrapper">
+        <div class="outer">
 
-        <section class="mainHeader mainHeader__right">
-            <!--button -->
-            <a href="#"> <img src="./img/headStock.png" alt="search button" class="mainHeader mainHeader__searchButton">
-            </a>
-        </section>
+            <div class="product--modal">
+                <div class="delete modalX">x</div>
+                <h1 class="titulo">Checkout</h1>
 
-        <!------------------------------------------------------------------------------------------>
-        <!------------------------------------------------------------------------------------------>
+                <div class="inputs animated">
+                    <div class="identity">
+                        <input type="text" placeholder="Name*" class="input name">
+                        <input type="text" placeholder="Last-Name*" class="input lastname">
+                    </div>
 
-    </section>
+                    <div class="contact">
+                        <input type="text" placeholder="E-mail*" class="input email">
+                        <input type="text" placeholder="Phone Number*" class="input phone"
+                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                            required maxlength="10">
+                    </div>
+                    <div class="location">
+                        <input type="text" placeholder="Country*" class="input country">
+                        <input type="text" placeholder="State*" class="input state">
+                        <input type="text" placeholder="City*" class="input city">
+                    </div>
+                </div>
+
+                <div class="inputs animated">
+                    <div class="identity">
+                        <div class="inputAndText">
+                            <p>Card number *</p>
+                            <input type="text" placeholder="XXXX XXXX XXXX XXXX*" class="input card"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                required maxlength="16">
+                        </div>
+
+                        <div class="inputAndText">
+                            <p>Expiration date *</p>
+                            <input type="text" placeholder="MM/YYYY" class="input date" required maxlength="7">
+                        </div>
+
+                        <div class="inputAndText">
+                            <p>CVC *</p>
+                            <input type="text" placeholder="CVC" class="input cvc"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                required maxlength="3">
+                        </div>
+
+                    </div>
+                    <div class="backBtn">BACK</div>
+
+                </div>
 
 
 
+                <div class="inputs animated">
 
-    <main class="products animated pulse">
+                    <div class="inputAndText">
+                        <p class="billName">NAME APELLIDO</p>
+                        <P class="billContact"> CORREO@gmail.com - 3212213213</P>
+                        <p class="billRegion">Pais - Estado - Ciudad</p>
+
+                    </div>
+
+
+                    {{#each products}}
+                    <div class="inputAndText">
+                        <p class="productTotal">{{brand}} {{series}} {{reference}}</p>
+                        <p class="priceTotal">${{price}}</p>
+                    </div>
+                    {{/each}}
+
+
+                    <div class="inputAndText">
+                        <div class="total"></div>
+                    </div>
 
 
 
-        {{#each products}}
+                    <div class="backBtn">BACK</div>
 
-        <div class="productCard  animated fadeIn">
+                </div>
 
-            <div class="delete">x</div>
-            <p class="_id">{{_id}}</p>
-            <p class="object">{{object}}</p>
-            <p class="descripcion"> {{des}} </p>
-            <p class="fav">{{fav}}</p>
 
-            <img class="productCard--image " src="./img/productos/thumbnails/{{image}}" alt="">
-
-            <div class="productCard--info animated fadeInDown">
-
-                <a class="productCard--links">
-                    <p class="productCard--brand">{{brand}} {{series}}</p>
-                    <p class="productCard--reference">{{reference}}</p>
-                    <p class="productCard--price">${{price}}</p>
-                </a>
+                <div class="nextBtn">NEXT</div>
 
             </div>
+
         </div>
-
-        {{/each}}
-
-
-    </main>
-
-
-    <a href="#"> <img src="./img/up.png" class="up"></a>
-
-
-
-    <section class="mainHeader mainHeader__middle double">
-
-        <section class="mainHeader mainHeader__top">
-            <!--search bar-->
-            <input type="text" class="mainHeader mainheader__srchBar" placeholder="Guitarras, Amplificadores, Bajos...">
-
-            <img src="./img/serchGlass.png" class="burguerGlass" alt="searchIcon">
-        </section>
-
-
-        <section class="mainHeader mainHeader__bottom">
-
-            <a href="/products?object=guitar" class="mainNav mainNav__link">Guitars</a>
-            <a href="/products?object=bass" class="mainNav mainNav__link">Basses</a>
-            <a href="/products?object=amp" class="mainNav mainNav__link">Amps</a>
-            <a href="/products?object=accessories" class="mainNav mainNav__link">Accessories</a>
-
-
-        </section>
-
-    </section>
-
-
+    </div>
 
 
 
