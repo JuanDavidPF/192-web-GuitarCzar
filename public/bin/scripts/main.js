@@ -29,6 +29,7 @@ var palanca = document.querySelector('.characteristics__three');
 var titleOne = document.querySelector('.one');
 var titleTwo = document.querySelector('.two');
 var titleThree = document.querySelector('.three');
+var helper = document.querySelector('.up')
 var draw = setInterval(draw, 17);
 var contador = 0;
 
@@ -130,6 +131,12 @@ function draw() {
             navBottom.style.top = '-180px';
         }
 
+        if (pageYOffset >= 3560 || pageYOffset <= 760) {
+            helper.style.display = "none"
+        } else {
+            helper.style.display = "block"
+        }
+
 
     } else {
         searchBar.style.transition = 'width 0s, opacity 0s 0s';
@@ -145,6 +152,14 @@ function draw() {
     if (ventanaGrande.matches) {
         contador = 0;
         guitarTape.style.left = '0%';
+
+
+        if (pageYOffset >= 3970 || pageYOffset <= 975) {
+            helper.style.display = "none"
+        } else {
+            helper.style.display = "block"
+        }
+
     }
     if (ventanaMediana.matches) {
 
@@ -158,11 +173,15 @@ function draw() {
 
         }
 
+
+        if (pageYOffset >= 3470 || pageYOffset <= 958) {
+            helper.style.display = "none"
+        } else {
+            helper.style.display = "block"
+        }
+
     }
 
-    document.addEventListener("click", function (e) {
-        console.log(e.target)
-    })
 
 
 
