@@ -521,14 +521,24 @@ body {
 
     display: flex;
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     align-items: center;
     justify-content: center;
-    background-color: #F25252;
-
 
 }
 
+.controles {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #151222;
+}
+
+.control {
+    cursor: pointer;
+    width: 35px;
+}
 
 
 /*//////////////////////////////////////////////////////////////////////////////////////////
@@ -907,8 +917,6 @@ body {
 
     }
 
-
-
 }
 
 
@@ -955,7 +963,8 @@ ol {
 }
 
 .social-container .col {
-    border: 1px solid rgba(39, 39, 39, 0.781);;
+    border: 1px solid rgba(39, 39, 39, 0.781);
+    ;
 }
 
 .nav-list li a:before {
@@ -971,7 +980,7 @@ ol {
     transition: .22s ease;
 }
 
-.pie{
-padding-top: 20px;
+.pie {
+    padding-top: 20px;
 
 }
