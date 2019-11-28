@@ -59,11 +59,6 @@ let rgbeLoader = new THREE.RGBELoader().setDataType(THREE.UnsignedByteType)
     })
 
 
-
-
-
-
-
 //renderer
 
 
